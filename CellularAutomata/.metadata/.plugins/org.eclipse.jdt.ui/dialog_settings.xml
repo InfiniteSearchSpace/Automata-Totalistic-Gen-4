@@ -14,12 +14,13 @@
 	<section name="JavaElementSearchActions">
 	</section>
 	<section name="FatJarPackageWizard">
-		<item value="/media/pseudo/Media and Storage/Automata-Gen-3-master/AutomataRunnable.jar" key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION"/>
+		<item value="/media/pseudo/Media and Storage/Automata-Totalistic-Gen-4-master/AutomataRunnable.jar" key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION"/>
 		<item value="Main - Omniscience" key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME"/>
 		<item value="/media/pseudo/Media and Storage/Automata-Gen-3-master/CellularAutomata" key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION"/>
 		<item value="false" key="FatJarPackageWizardPage.ANTSCRIPT_SAVE"/>
 		<item value="1" key="FatJarPackageWizardPage.LIBRARY_HANDLING"/>
 		<list key="FatJarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="/media/pseudo/Media and Storage/Automata-Totalistic-Gen-4-master/AutomataRunnable.jar"/>
 			<item value="/media/pseudo/Media and Storage/Automata-Gen-3-master/AutomataRunnable.jar"/>
 			<item value="/media/pseudo/Media and Storage/Automata-Gen-3-master/CellularAutomata/AutomataRunnable.jar"/>
 		</list>

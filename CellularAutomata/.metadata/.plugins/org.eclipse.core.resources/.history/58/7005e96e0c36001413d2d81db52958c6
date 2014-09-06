@@ -78,7 +78,7 @@ public class jMenuEditor implements ActionListener {
         
         menu.addSeparator();
         
-        menuItem = new JMenuItem("Import Rule [WIP!]");
+        menuItem = new JMenuItem("Import Rule");
         menuItem.addActionListener(this);
         menu.add(menuItem);
         

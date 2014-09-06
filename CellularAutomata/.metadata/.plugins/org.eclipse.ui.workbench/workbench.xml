@@ -41,13 +41,13 @@
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" partName="Main.java" path="/media/pseudo/Media and Storage/Automata-Gen-4-master/CellularAutomata/Omniscience/src/Main.java" title="Main.java" tooltip="Omniscience/src/Main.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" partName="Main.java" path="/media/pseudo/Media and Storage/Automata-Totalistic-Gen-4-master/CellularAutomata/Omniscience/src/Main.java" title="Main.java" tooltip="Omniscience/src/Main.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Omniscience/src/Main.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1031" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="jMenuEditor.java" partName="jMenuEditor.java" path="/media/pseudo/Media and Storage/Automata-Gen-4-master/CellularAutomata/Omniscience/src/jMenuEditor.java" title="jMenuEditor.java" tooltip="Omniscience/src/jMenuEditor.java" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="jMenuEditor.java" partName="jMenuEditor.java" path="/media/pseudo/Media and Storage/Automata-Totalistic-Gen-4-master/CellularAutomata/Omniscience/src/jMenuEditor.java" title="jMenuEditor.java" tooltip="Omniscience/src/jMenuEditor.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Omniscience/src/jMenuEditor.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="7686" selectionTopPixel="4272"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2270" selectionTopPixel="1015"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ClickPanel.java" partName="ClickPanel.java" path="/media/pseudo/Media and Storage/Automata-Gen-4-master/CellularAutomata/Omniscience/src/ClickPanel.java" title="ClickPanel.java" tooltip="Omniscience/src/ClickPanel.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Omniscience/src/ClickPanel.java"/>
@@ -308,8 +308,6 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Omniscience/src/ToggleFrame.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Omniscience/src/jMenuEditor.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Omniscience/src/Main.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Omniscience/src/getImage.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Omniscience/src/jMenuEditor.java"/>
@@ -317,156 +315,157 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Omniscience/src/ToggleFrame.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Omniscience/src/ClickPanel.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Omniscience/src/automataLib.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Omniscience/src/Main.java"/>
 </editors>
-<item historyLabel="ToggleFrame.java" index="0">
-<position info="not_deleted" x="1886" y="0"/>
-</item>
-<item historyLabel="jMenuEditor.java" index="1">
-<position info="not_deleted" x="730" y="0"/>
-</item>
-<item historyLabel="Main.java" index="2">
-<position info="not_deleted" x="297" y="0"/>
-</item>
-<item historyLabel="getImage.java" index="3">
+<item historyLabel="getImage.java" index="1">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="jMenuEditor.java" index="4">
+<item historyLabel="jMenuEditor.java" index="2">
 <position/>
 </item>
-<item historyLabel="jMenuMain.java" index="5">
+<item historyLabel="jMenuMain.java" index="3">
 <position info="not_deleted" x="1346" y="0"/>
 </item>
-<item historyLabel="jMenuEditor.java" index="4">
+<item historyLabel="jMenuEditor.java" index="2">
 <position info="not_deleted" x="602" y="0"/>
 </item>
-<item historyLabel="ToggleFrame.java" index="6">
+<item historyLabel="ToggleFrame.java" index="4">
 <position info="not_deleted" x="543" y="0"/>
 </item>
-<item historyLabel="jMenuMain.java" index="5">
+<item historyLabel="jMenuMain.java" index="3">
 <position info="not_deleted" x="1346" y="0"/>
 </item>
-<item historyLabel="jMenuEditor.java" index="4">
+<item historyLabel="jMenuEditor.java" index="2">
 <position info="not_deleted" x="1796" y="0"/>
 </item>
-<item historyLabel="jMenuEditor.java" index="4">
+<item historyLabel="jMenuEditor.java" index="2">
 <position info="not_deleted" x="3585" y="0"/>
 </item>
-<item historyLabel="jMenuEditor.java" index="4">
+<item historyLabel="jMenuEditor.java" index="2">
 <position/>
 </item>
-<item historyLabel="jMenuEditor.java" index="4">
+<item historyLabel="jMenuEditor.java" index="2">
 <position info="not_deleted" x="4812" y="0"/>
 </item>
-<item historyLabel="jMenuEditor.java" index="4">
+<item historyLabel="jMenuEditor.java" index="2">
 <position info="not_deleted" x="6161" y="0"/>
 </item>
-<item historyLabel="jMenuEditor.java" index="4">
+<item historyLabel="jMenuEditor.java" index="2">
 <position info="not_deleted" x="6460" y="0"/>
 </item>
-<item historyLabel="jMenuEditor.java" index="4">
+<item historyLabel="jMenuEditor.java" index="2">
 <position info="not_deleted" x="6753" y="0"/>
 </item>
-<item historyLabel="jMenuEditor.java" index="4">
+<item historyLabel="jMenuEditor.java" index="2">
 <position info="not_deleted" x="8519" y="0"/>
 </item>
-<item historyLabel="ClickPanel.java" index="7">
+<item historyLabel="ClickPanel.java" index="5">
 <position info="not_deleted" x="2272" y="0"/>
 </item>
-<item historyLabel="jMenuEditor.java" index="4">
+<item historyLabel="jMenuEditor.java" index="2">
 <position info="not_deleted" x="2520" y="0"/>
 </item>
-<item historyLabel="ToggleFrame.java" index="6">
+<item historyLabel="ToggleFrame.java" index="4">
 <position info="not_deleted" x="105" y="0"/>
 </item>
-<item historyLabel="ClickPanel.java" index="7">
+<item historyLabel="ClickPanel.java" index="5">
 <position info="not_deleted" x="876" y="0"/>
 </item>
-<item historyLabel="ToggleFrame.java" index="6">
+<item historyLabel="ToggleFrame.java" index="4">
 <position info="not_deleted" x="105" y="0"/>
 </item>
-<item historyLabel="ClickPanel.java" index="7">
+<item historyLabel="ClickPanel.java" index="5">
 <position info="not_deleted" x="876" y="0"/>
 </item>
-<item historyLabel="ClickPanel.java" index="7">
+<item historyLabel="ClickPanel.java" index="5">
 <position info="not_deleted" x="1481" y="0"/>
 </item>
-<item historyLabel="ToggleFrame.java" index="6">
+<item historyLabel="ToggleFrame.java" index="4">
 <position info="not_deleted" x="1892" y="4"/>
 </item>
-<item historyLabel="ClickPanel.java" index="7">
+<item historyLabel="ClickPanel.java" index="5">
 <position info="not_deleted" x="1256" y="0"/>
 </item>
-<item historyLabel="jMenuEditor.java" index="4">
+<item historyLabel="jMenuEditor.java" index="2">
 <position info="not_deleted" x="3046" y="0"/>
 </item>
-<item historyLabel="Main.java" index="2">
+<item historyLabel="Main.java" index="0">
 <position info="not_deleted" x="1031" y="0"/>
 </item>
-<item historyLabel="jMenuEditor.java" index="4">
+<item historyLabel="jMenuEditor.java" index="2">
 <position info="not_deleted" x="3046" y="0"/>
 </item>
-<item historyLabel="jMenuEditor.java" index="4">
+<item historyLabel="jMenuEditor.java" index="2">
 <position info="not_deleted" x="4564" y="0"/>
 </item>
-<item historyLabel="jMenuEditor.java" index="4">
+<item historyLabel="jMenuEditor.java" index="2">
 <position info="not_deleted" x="7260" y="0"/>
 </item>
-<item historyLabel="ClickPanel.java" index="7">
+<item historyLabel="ClickPanel.java" index="5">
 <position info="not_deleted" x="1169" y="125"/>
 </item>
-<item historyLabel="jMenuEditor.java" index="4">
+<item historyLabel="jMenuEditor.java" index="2">
 <position info="not_deleted" x="7260" y="0"/>
 </item>
-<item historyLabel="automataLib.java" index="8">
+<item historyLabel="automataLib.java" index="6">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="jMenuEditor.java" index="4">
+<item historyLabel="jMenuEditor.java" index="2">
 <position info="not_deleted" x="7260" y="0"/>
 </item>
-<item historyLabel="jMenuEditor.java" index="4">
+<item historyLabel="jMenuEditor.java" index="2">
 <position info="not_deleted" x="7541" y="0"/>
 </item>
-<item historyLabel="jMenuEditor.java" index="4">
+<item historyLabel="jMenuEditor.java" index="2">
 <position info="not_deleted" x="7543" y="0"/>
 </item>
-<item historyLabel="jMenuEditor.java" index="4">
+<item historyLabel="jMenuEditor.java" index="2">
 <position info="not_deleted" x="7577" y="0"/>
 </item>
-<item historyLabel="jMenuEditor.java" index="4">
+<item historyLabel="jMenuEditor.java" index="2">
 <position/>
 </item>
-<item historyLabel="jMenuEditor.java" index="4">
+<item historyLabel="jMenuEditor.java" index="2">
 <position info="not_deleted" x="7580" y="0"/>
 </item>
-<item historyLabel="jMenuEditor.java" index="4">
+<item historyLabel="jMenuEditor.java" index="2">
 <position info="not_deleted" x="7441" y="0"/>
 </item>
-<item historyLabel="jMenuEditor.java" index="4">
+<item historyLabel="jMenuEditor.java" index="2">
 <position info="not_deleted" x="7486" y="0"/>
 </item>
-<item historyLabel="jMenuEditor.java" index="4">
+<item historyLabel="jMenuEditor.java" index="2">
 <position info="not_deleted" x="7267" y="0"/>
 </item>
-<item historyLabel="jMenuEditor.java" index="4">
+<item historyLabel="jMenuEditor.java" index="2">
 <position info="not_deleted" x="7482" y="1"/>
 </item>
-<item historyLabel="jMenuEditor.java" index="4">
+<item historyLabel="jMenuEditor.java" index="2">
 <position info="not_deleted" x="7444" y="0"/>
 </item>
-<item historyLabel="jMenuEditor.java" index="4">
+<item historyLabel="jMenuEditor.java" index="2">
 <position info="not_deleted" x="7630" y="0"/>
 </item>
-<item historyLabel="jMenuEditor.java" index="4">
+<item historyLabel="jMenuEditor.java" index="2">
 <position info="not_deleted" x="7996" y="0"/>
 </item>
-<item historyLabel="jMenuEditor.java" index="4">
+<item historyLabel="jMenuEditor.java" index="2">
 <position info="not_deleted" x="7999" y="0"/>
 </item>
-<item historyLabel="jMenuEditor.java" index="4">
+<item historyLabel="jMenuEditor.java" index="2">
 <position/>
 </item>
-<item active="true" historyLabel="jMenuEditor.java" index="4">
+<item historyLabel="jMenuEditor.java" index="2">
 <position/>
+</item>
+<item historyLabel="jMenuEditor.java" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Main.java" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item active="true" historyLabel="jMenuEditor.java" index="2">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>

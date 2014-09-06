@@ -78,7 +78,7 @@ public class jMenuEditor implements ActionListener {
         
         menu.addSeparator();
         
-        menuItem = new JMenuItem("Import Rule [WIP!]");
+        menuItem = new JMenuItem("Import Rule");
         menuItem.addActionListener(this);
         menu.add(menuItem);
         
@@ -287,9 +287,9 @@ public class jMenuEditor implements ActionListener {
     		//find the number between second , and third ,
     		//on encountering next : move the 'starting point' index to it
     		
-    	/*	importedRule[i][0] = ;
+    		importedRule[i][0] = ;
     		importedRule[i][1] = ;
-    		importedRule[i][2] = ;*/
+    		importedRule[i][2] = ;
     	}
 		    	
     	int start = 1;
