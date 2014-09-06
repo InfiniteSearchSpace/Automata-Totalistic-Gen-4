@@ -1,0 +1,27 @@
+public class neighbours {
+	int[][] NBH;
+	int[][] TFNbH;
+	//constructor
+	public neighbours(int countNbr) {
+	//System.out.println("neighbours");
+		NBH = new int[countNbr][3]; //initiate array with required number of neighbour slots
+		
+		//Toggleframe input, conway neighbourhood default
+		TFNbH = new int[][] {
+			{-1,-1,0,0},
+			{-1,0,0,1},
+			{-1,1,0,2},
+			{0,-1,0,3},
+			{0,1,0,4},
+			{1,-1,0,5},
+			{1,0,0,6},
+			{1,1,0,7}
+		};
+	}
+
+	public void newNbrhood(int countNbr) {
+		NBH = new int[countNbr][3]; //initiate array with required number of neighbour slots
+	}
+
+	
+}

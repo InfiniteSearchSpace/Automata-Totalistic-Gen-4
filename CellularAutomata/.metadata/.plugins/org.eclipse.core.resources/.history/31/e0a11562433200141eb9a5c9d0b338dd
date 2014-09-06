@@ -1,0 +1,80 @@
+import java.util.Random;
+
+
+
+public class neighbours {
+	int[][] NBH;
+	Random r = new Random();
+	int custHood = 0;
+	
+	int[] useCustNbrAr = {-1};
+	int[][] TFNbH;
+	//constructor
+	public neighbours(int countNbr) {
+	//System.out.println("neighbours");
+		NBH = new int[countNbr][3]; //initiate array with required number of neighbour slots
+		TFNbH = new int[0][0];
+	}
+	//called to define a neighbour's position (x,y,z,neighbour id)
+	public void setNBH(int xx, int yy, int zz, int nbr) {
+		NBH[nbr][0] = xx;
+		NBH[nbr][1] = yy;
+		NBH[nbr][2] = zz;
+	}
+	
+	public void newCNAr(int instrCount){
+		int oldLen = useCustNbrAr.length;
+		
+		int[] newAr = new int[instrCount];
+		
+		int newLen = 0;
+		if(oldLen < instrCount) {newLen = oldLen;}
+		else {newLen = instrCount;}
+		
+		System.out.println(oldLen + ", " + instrCount + " ~ " + newLen);
+		
+		if(newLen == oldLen && oldLen < instrCount) {
+			for(int i = 0; i < newLen+1; i++) {
+				newAr[i]=-1;
+			}
+		}
+		
+		for(int i = 0; i < newLen; i++) {
+			newAr[i]=useCustNbrAr[i];
+		}
+		
+		useCustNbrAr = newAr;
+	}
+	
+	public void resetNbrAr(){
+		for(int i = 0; i < useCustNbrAr.length; i++) {
+			useCustNbrAr[i]=-1;
+		}
+	}
+	
+	public void setNbrhoodAr(int nbhood) {
+		useCustNbrAr[useCustNbrAr.length-1] = nbhood;
+	}
+	
+	public void setIndexNbrhoodAr(int nbhood, int ruleIndex) {
+		useCustNbrAr[ruleIndex] = nbhood;
+	}
+	
+	public void newNbrhood(int countNbr) {
+		NBH = new int[countNbr][3]; //initiate array with required number of neighbour slots
+	}
+	
+	
+	public void setNbrhood(int hood){
+
+		if(hood == -2) {
+			newNbrhood(TFNbH.length);
+			for (int i = 0; i < TFNbH.length; i++){
+				setNBH(TFNbH[i][0], TFNbH[i][1], TFNbH[i][2], i);
+			}
+		}
+		
+	}
+	
+}/*
+*/

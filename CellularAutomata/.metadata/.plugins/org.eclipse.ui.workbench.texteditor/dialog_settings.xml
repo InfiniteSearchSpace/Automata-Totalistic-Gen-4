@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="306" key="DIALOG_WIDTH"/>
+		<item value="427" key="DIALOG_Y_ORIGIN"/>
+		<item value="1517" key="DIALOG_X_ORIGIN"/>
+		<item value="410" key="DIALOG_HEIGHT"/>
+		<item value="1|Droid Sans|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="true" key="wrap"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
+		<item value="false" key="incremental"/>
+		<item value="false" key="wholeword"/>
+		<item value="setV" key="selection"/>
+		<list key="findhistory">
+			<item value="setv"/>
+			<item value="set"/>
+			<item value=".GRAY"/>
+			<item value="DARK_GRAY"/>
+			<item value="System.out"/>
+			<item value="syst"/>
+			<item value="a."/>
+			<item value="u."/>
+		</list>
+		<list key="replacehistory">
+			<item value=".LIGHT_GRAY"/>
+			<item value="GRAY"/>
+			<item value="//System.out"/>
+			<item value="u"/>
+			<item value="s"/>
+		</list>
+	</section>
+</section>

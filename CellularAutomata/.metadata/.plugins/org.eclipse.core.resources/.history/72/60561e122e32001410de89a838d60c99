@@ -1,0 +1,150 @@
+import java.awt.Color;
+import java.awt.Component;
+import java.util.Random;
+ 
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.SwingConstants;
+import javax.swing.SwingUtilities;
+import javax.swing.JLabel;
+
+@SuppressWarnings("serial")
+public class Main extends JFrame {
+
+	public Main(){
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		//set default sizes
+		int x=160, y = 90, z=1;
+		
+		//prompt user for program dimensions
+		String str = JOptionPane.showInputDialog(this, "Length", x);
+    	if(str != null) {
+    		x = Integer.parseInt(str);
+    	}
+    	
+    	//use widescreen 16:9 ratio
+    	int y_widescreen = (int)((float)x*((float)9/(float)16));
+    	
+    	str = JOptionPane.showInputDialog(this, "Height", y_widescreen);
+    	if(str != null) {
+    		y = Integer.parseInt(str);
+    	}
+    	
+		
+    	 str = JOptionPane.showInputDialog(this, "Depth", z);
+    	if(str != null) {
+    		z = Integer.parseInt(str);
+    	}
+    	
+		setSizes(x, y, z);
+	}
+	
+	public void setSizes(int xSize, int ySize, int zSize) {
+		
+		//minimum window frame lengths
+		int minMenuXLen = 340;
+        int minMenuYLen = 260;
+		
+        JLabel l = new JLabel(); 							//Textbox for info display
+    	automataLib a = new automataLib(this,xSize,ySize); 	//Performs all automata functions for the sim;
+    	Universe u= new Universe(xSize, 	ySize,  zSize, 	a);											//Array of universes/worlds
+    	
+    	slider[] sl = new slider[2]; 
+    	
+    	//Set Universal initial parameters
+    	//This determines which automata functions to run in what order, and with which parameter values.
+    	
+    	u.instructions = new int[][] {
+    			//Fill out Integer instruction arrays here.
+    			//{InstructionNumber, Z-layer, args[2-4]...} 
+    			{0,0,1,1,1}
+        };
+    	
+    	int xxsize = (xSize+2+2) + 6 + 2 +120 + 56;
+    	int yysize = (ySize+2) + 42 + 24 + 2+8;
+    	
+    	if(xSize < minMenuXLen) {if(xxsize < minMenuXLen){xxsize = minMenuXLen;}}
+		if(ySize < minMenuYLen) {if(yysize < minMenuYLen){yysize = minMenuYLen;}}
+		
+		
+
+    	//Set parameters for each surface/display panel
+        //        	(Width,	Height,	Depth,		X,						Y,						Assigned universe)
+    	Surf s = new Surf(xSize, ySize, 	u.zlen,	(xSize)+2+2,	(ySize)+16+2, 	u);
+    	
+    	ml myml = new ml(this,s,l,u,sl);									//Mouselistener for user input;
+    	sl[0] = new slider(this,xSize,yysize,zSize, myml, 0, 5);
+    	sl[1] = new slider(this,xSize,yysize,zSize, myml, 1, 25);
+    	mwl mymwl = new mwl(this,myml);										//MouseWheelListener for user input;
+    	MouseMotionList mMot = new MouseMotionList(this, myml);				//MouseWheelListener for user input;
+    	jMenuMain jmen = new jMenuMain(myml);								//add Menu Gui
+    	
+    	
+    	//Textbox for info display
+    	l.setLayout(null); 
+    	l.setBounds(xSize+16, 2, 80+40, 14*(10+4));
+    	l.setVisible(true);
+    	
+    	l.setText("Menu");
+    	
+    	//Layout for Main window/frame
+    	this.setLayout(null);
+
+    	this.setSize(xxsize, yysize);
+    	
+    	this.setVisible(true);
+    	this.setResizable(false);
+    	this.setLocation(96, 32);
+    	
+    	//Assemble the components
+    	this.add(l);
+    	this.add(s);
+    	
+    	//Configure initial state
+    	jmen.setGUI(this);
+    	
+    	
+    	myml.updateListing(); 	//show menu on start
+    	
+    	myml.toggleStart(); //Plays a fram so the universe is visible, unpauses
+    	myml.toggleStart(); //second toggle pauses
+    	
+    	//makes sure first surface is visible
+    	u.runOnce(1,0);
+    	
+    	//Kickstart u[0] with the action in class Universe. Usually a seeding. 
+    	//Takes int: rand, val
+    	u.runOnce(myml.seedRand,myml.seedVal);
+    	
+    	myml.ruleChanged(0);
+    	
+    	myml.refresh();
+  
+    	
+	}
+	
+	public static void main(String[] args) {
+		
+        SwingUtilities.invokeLater(new Runnable() { 
+            @Override
+            public void run() { //breaks program's static dependance
+            	new Main(); //Main window/frame
+            }
+        });
+    }
+    
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
