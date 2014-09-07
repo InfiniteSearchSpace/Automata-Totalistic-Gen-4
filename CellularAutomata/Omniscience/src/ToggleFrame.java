@@ -22,7 +22,7 @@ public class ToggleFrame extends JFrame {
 			gridSize = ML.blockSize;
 		}
 		
-		String str = JOptionPane.showInputDialog(ML.m, "Grid Size:", ML.blockSize);
+		String str = JOptionPane.showInputDialog(null, "Grid Size:", ML.blockSize);
     	if(str != null) {
     		gridSize = Integer.parseInt(str);
 		}

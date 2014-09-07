@@ -19,7 +19,7 @@ public class Main extends JFrame {
 		int x=320, y = 135, z=1;
 		
 		//prompt user for program dimensions
-		String str = JOptionPane.showInputDialog(this, "Length", x);
+		String str = JOptionPane.showInputDialog(null, "Length", x);
     	if(str != null) {
     		x = Integer.parseInt(str);
     	}
@@ -28,13 +28,13 @@ public class Main extends JFrame {
     	int y_widescreen = (int)((float)x*((float)9/(float)16));
     	
     	//prompt user for program dimensions
-    	str = JOptionPane.showInputDialog(this, "Height", y_widescreen);
+    	str = JOptionPane.showInputDialog(null, "Height", y_widescreen);
     	if(str != null) {
     		y = Integer.parseInt(str);
     	}
     	
     	//prompt user for program dimensions
-    	 str = JOptionPane.showInputDialog(this, "Depth", z);
+    	 str = JOptionPane.showInputDialog(null, "Depth", z);
     	if(str != null) {
     		z = Integer.parseInt(str);
     	}

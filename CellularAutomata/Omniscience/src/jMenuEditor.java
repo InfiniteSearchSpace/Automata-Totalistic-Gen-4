@@ -1,5 +1,9 @@
 
 import java.awt.Color;
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.ClipboardOwner;
+import java.awt.datatransfer.StringSelection;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -15,7 +19,7 @@ public class jMenuEditor implements ActionListener {
 	ml ML;
 	automataLib a;
 	boolean bLiveRuleUpdate = false;
-	
+		
 	int[][] nbrhood;
     //constructor, captures UI controller: ml
     public jMenuEditor(ToggleFrame TFrame, ml mML, automataLib aa) {
@@ -58,6 +62,13 @@ public class jMenuEditor implements ActionListener {
         menuBar.add(menu);
         
         //Populate menu
+        
+        menuItem = new JMenuItem("Toggle Live Rule Updating");
+        menuItem.addActionListener(this);
+        menu.add(menuItem);
+        
+        menu.addSeparator();
+        
         menuItem = new JMenuItem("--> Get Neighbourhood");
         menuItem.addActionListener(this);
         menu.add(menuItem);
@@ -77,14 +88,16 @@ public class jMenuEditor implements ActionListener {
         menu.add(menuItem);
         
         menu.addSeparator();
-        
-        menuItem = new JMenuItem("Import Rule [WIP!]");
+
+        menuItem = new JMenuItem("Export Rule");
         menuItem.addActionListener(this);
         menu.add(menuItem);
         
-        menuItem = new JMenuItem("Toggle Live Rule Updating");
+        menuItem = new JMenuItem("Import Rule");
         menuItem.addActionListener(this);
         menu.add(menuItem);
+        
+        
         
         return menuBar;
     }
@@ -107,8 +120,10 @@ public class jMenuEditor implements ActionListener {
         if(source.getText() == "Set Neighbourhood -->") 	{bLiveRuleUpdate = false; setNeighbourhood();}
 
         if(source.getText() == "Set Rule -->") 				{setRule();}
-        
+
         if(source.getText() == "Import Rule") 				{importRule();}
+        
+        if(source.getText() == "Export Rule") 				{exportRule();}
         
         if(source.getText() == "Toggle Live Rule Updating") {
         	 if(bLiveRuleUpdate == false) {bLiveRuleUpdate = true;} else {bLiveRuleUpdate = false;}
@@ -263,10 +278,67 @@ public class jMenuEditor implements ActionListener {
     	TF.updatePanelColors();
     }
     
+    
+    public void exportRule() {
+    	/*
+    	 *  [ int Start, int End, int val]
+    	 * 
+     	 */
+    	
+    	
+    	int[][][] intAr = new int[TF.pp.length][TF.pp[0].length][1];
+    	for(int i = 0; i < TF.pp.length; i++){
+    		for(int j = 0; j < TF.pp[i].length; j++){
+        		intAr[j][i][0] = TF.pp[j][i].val;
+        	}
+    	}
+    		
+    	int ii=0, jj=0;
+    	int ruleLen=0;
+    		
+    	for(int i = 0; i < TF.pp.length; i++){
+    		for(int j = 0; j < TF.pp[i].length; j++){
+        		if(intAr[i][j][0] == -2) {ii=i; jj=j;}
+        	}
+    	}
+    		
+    	for(int i = 0; i < TF.pp.length; i++){
+    		for(int j = 0; j < TF.pp[i].length; j++){
+        		if(intAr[i][j][0] == -3) {ruleLen = (j-jj)-1;}
+        	}
+    	}
+    		
+    	int[][] arRule = new int[ruleLen][3];
+    		
+    		
+    		
+    	for(int i = 0; i < ruleLen; i++) {
+    		for(int j = 0; j < arRule[i].length; j++) {
+    			arRule[i][j] = intAr[ii+j][jj+i+1][0];
+    		}
+    	}
+    		
+    	//a.arTF_Ruleset = arRule;
+    	
+    	String exportRuleString = "";
+    	for(int i = 0; i < ruleLen; i++) {
+    		exportRuleString += ":";
+    		for(int j = 0; j < arRule[i].length; j++) {
+    			exportRuleString+=arRule[i][j]+",";
+    		}
+    	}
+    	System.out.println(exportRuleString);
+    	
+    	
+    	JOptionPane.showInputDialog(null, "This is the text rule. It should be automatically copied to your system clipboard.\nIf not, copy (CTRL-C) it to the local clipboard, which will be cleared on program exit.", exportRuleString);
+    	SystemClip sysClip = new SystemClip(); 
+    	sysClip.setSystemClip(exportRuleString);
+    }
+    
     public void importRule() {
     	TF.resetPanels();
 
-    	String str = JOptionPane.showInputDialog(a.m, "Input Rule", ":,");
+    	String str = JOptionPane.showInputDialog(null, "Input Rule", ":,");
     	//:4,8,0,:3,3,1,:0,1,0, //CGoL
     	int ruleLines = 0;
     	
@@ -276,22 +348,82 @@ public class jMenuEditor implements ActionListener {
     		}
     	}
     	
-    	int[][] importedRule = new int[ruleLines][3];
+    	int validColumnCount = 3;
     	
-    	for(int i = 0; i < str.length(); i++) {
-    		//Integer.parseInt(str.substring(i*3, i*3+1));
+    	int[][] importedRule = new int[ruleLines][validColumnCount];
+    	
+    	int thisColon = 0;
+    	int nextColon = 0;
+    	int thisComma = 0;
+    	int nextComma = 0;
+    	
+    	//For each line to be parsed
+    	for(int i = 0; i < ruleLines; i++) {
+    		//Identify rule line start & end
+    		nextColon = str.indexOf(":", thisColon+1);
+    		if(nextColon == -1) {nextColon = str.length();}
     		
-    		//set 'starting point' index to the first :
-    		//find the number between : and the first ,
-    		//find the number between first , and second ,
-    		//find the number between second , and third ,
-    		//on encountering next : move the 'starting point' index to it
+    		//set up colon debug printer
+    		String sOut = "TC:" + thisColon + " NC:" + nextColon+ " sOut: ";
+    		//for each character in the range between the current colon and the next colon (start of next line)
+    		for(int j = thisColon; j < nextColon; j++) {
+    			sOut += str.substring(j, j+1);
+    		}
+    		//Print the debug string
+    		System.out.println(sOut);
     		
-    	/*	importedRule[i][0] = ;
-    		importedRule[i][1] = ;
-    		importedRule[i][2] = ;*/
+    		//count commas
+			int commaLines = 0;
+	    	for(int j = thisColon; j < nextColon; j++) {
+	    		if(",".equals(str.substring(j, j+1))) {
+	    			commaLines++;
+	    		}
+	    	}
+	    	
+	    	if(commaLines != 3) {
+	    		JOptionPane.showMessageDialog(null,"Syntax Error: Only " +validColumnCount+ " filled columns should be used. You used: " + commaLines + " on rule line: " + i + ".");
+	    	}
+	    	
+	    	//Print debug comma string
+	    	System.out.println("i"+i+" commas:" + commaLines);
+	    	
+			//set up comma debug printer
+	    	thisComma = thisColon;
+			for(int j = 0; j < commaLines; j++) {
+				nextComma = str.indexOf(",", thisComma+1);
+	    		if(nextComma == -1) {nextComma = str.length();}
+	    		
+				String sOut2 = "TCmm:" + thisComma + " NCmm:" + nextComma+ " sOut2: ";
+				String impRuleParam = "";
+				for(int k = thisComma+1; k < nextComma; k++) {
+	    			sOut2 += str.substring(k, k+1);
+	    			
+	    			impRuleParam += str.substring(k, k+1);
+	    		}
+				System.out.println(sOut2);
+				
+				//asign to rule array
+				importedRule[i][j] = Integer.parseInt(impRuleParam);
+				
+				//Go for another round
+	    		thisComma = nextComma;
+			}
+			
+			//Go for another round
+    		thisColon = nextColon;
+
     	}
-		    	
+    	
+		String finalArrayDebugChecker = "";
+    		
+    	for(int i = 0; i < importedRule.length; i++) {
+    		finalArrayDebugChecker += ":";
+    		for(int j = 0; j < importedRule[i].length; j++) {
+    			finalArrayDebugChecker += importedRule[i][j] + ",";
+    		}
+    	}
+    	System.out.println(finalArrayDebugChecker);
+    	
     	int start = 1;
     	int end = start + ruleLines +1;
     	
@@ -299,9 +431,9 @@ public class jMenuEditor implements ActionListener {
     	TF.pp[1][end].setVal(-3);
     	
     	for(int i = 0; i < a.arTF_Ruleset.length; i++){
-    		TF.pp[1][i+start+1].setVal(importedRule[i][0]);
-    		TF.pp[2][i+start+1].setVal(importedRule[i][1]);
-    		TF.pp[3][i+start+1].setVal(importedRule[i][2]);
+    		for(int j = 0; j < a.arTF_Ruleset[i].length; j++){
+	    		TF.pp[j+1][i+start+1].setVal(importedRule[i][j]);
+    		}
     	}
     		
     	
@@ -320,5 +452,7 @@ public class jMenuEditor implements ActionListener {
     	
     	TF.updatePanelColors();
     }
+    
+
     
 }

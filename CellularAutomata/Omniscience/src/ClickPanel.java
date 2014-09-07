@@ -41,7 +41,7 @@ public class ClickPanel extends JPanel implements MouseListener{
 		
 		if(e.getButton() == MouseEvent.BUTTON1) {val++;}
 		if(e.getButton() == MouseEvent.BUTTON2) {
-			String str = JOptionPane.showInputDialog(this, "Cell Value", "0");
+			String str = JOptionPane.showInputDialog(null, "Cell Value", "0");
 			if(str != null) {
 				val = Integer.parseInt(str);
 			}
