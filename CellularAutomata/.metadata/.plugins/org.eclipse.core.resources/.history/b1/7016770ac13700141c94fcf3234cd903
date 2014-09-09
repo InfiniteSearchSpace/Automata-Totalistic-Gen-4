@@ -1,0 +1,52 @@
+
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
+
+public class StatisticFrame extends JFrame {
+	
+	ClickPanel[][] pp;
+	automataLib a;
+	jMenuEditor jmen;
+	
+	int pXCount = 0;
+	int pYCount = 0;
+	int panelSize = 16;
+	int lastsize = panelSize;
+	int maxPanelVal = 0;
+	int gridSize = 20;
+	
+	public StatisticFrame(ml ML, automataLib aa) {
+		
+		a=aa;
+		
+		//!!!!//jmen = new jMenuEditor(this, ML, a);
+		
+		initTF(256);
+		
+	}
+	
+	public void initTF(int blockSize){
+		
+		int frameSize = 256;
+		
+		setLayout(null);
+		
+		int frx = frameSize+8+8;
+		int fry = frameSize+30+22+8;
+
+		if(frx < 96) { frx = 96; }
+		if(fry < 96) { fry = 96; }
+		setSize(frx, fry);
+		
+		
+		setVisible(true);
+		setResizable(false);
+		setLocation(96, 32);
+		
+		
+
+	}
+
+	
+}

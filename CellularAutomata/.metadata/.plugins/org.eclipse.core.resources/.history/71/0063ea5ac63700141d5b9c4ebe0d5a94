@@ -1,0 +1,69 @@
+
+import java.awt.Color;
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.ClipboardOwner;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.BorderFactory;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
+import javax.swing.JMenuBar;
+import javax.swing.JOptionPane;
+
+import Core.automataLib;
+ 
+public class jMenuStats implements ActionListener {
+
+	StatisticFrame SF;
+	ml ML;
+	automataLib a;
+		
+    public jMenuStats(StatisticFrame SFrame, ml mML, automataLib aa) {
+    	ML = mML;
+    	SF = SFrame;
+        SF.setJMenuBar(createMenuBar());
+        a=aa;
+	}
+
+	public JMenuBar createMenuBar() {
+
+		JMenuBar menuBar;
+        JMenu menu;
+        JMenuItem menuItem;
+        
+        //menu bar
+        menuBar = new JMenuBar();
+        
+        //create new menu
+        menu = new JMenu("View");
+        menu.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY));
+        menuBar.add(menu);
+        
+        menuItem = new JMenuItem("Choices");
+        menuItem.addActionListener(this);
+        menu.add(menuItem);
+        
+        menu.addSeparator();
+        
+        menuItem = new JMenuItem("Choices");
+        menuItem.addActionListener(this);
+        menu.add(menuItem);
+        
+        return menuBar;
+    }
+ 
+    public void actionPerformed(ActionEvent e) {
+    	
+        JMenuItem source = (JMenuItem)(e.getSource());
+  
+        if(source.getText() == "Choices") 		{System.out.println("Chosen");} 	
+                
+    }
+ 
+    
+   
+    
+}

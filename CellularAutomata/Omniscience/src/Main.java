@@ -8,6 +8,8 @@ import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
 import javax.swing.JLabel;
 
+
+
 @SuppressWarnings("serial")
 public class Main extends JFrame {
 
@@ -16,7 +18,7 @@ public class Main extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		//set default sizes
-		int x=320, y = 135, z=1;
+		int x=320, y = 180, z=1;
 		
 		//prompt user for program dimensions
 		String str = JOptionPane.showInputDialog(null, "Length", x);

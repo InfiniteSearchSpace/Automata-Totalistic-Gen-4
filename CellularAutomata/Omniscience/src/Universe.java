@@ -21,6 +21,9 @@ public class Universe {
 	
 	public boolean paused = false;
 	
+	boolean statsLive = false;
+	StatisticFrame statAr;
+	
 	automataLib a;
 	dataSources d;
 	
@@ -135,6 +138,10 @@ public class Universe {
 				new GetVid(this, folder, recordCounter, recordZoom);
 				recordCounter++;
 			} 
+	    	
+	    	if(statsLive && statAr != null) {
+	    		statAr.updateGraph();
+	    	}
 	    	
     	}
     }
