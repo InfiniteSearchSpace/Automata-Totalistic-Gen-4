@@ -212,14 +212,14 @@ public class ml extends JPanel implements MouseListener {
 				}
 
 				if (myFunction ==  1) { 
-					if(blockSize < 0) {blockSize=copyPasteBlockSize;}
+					blockSize=copyPasteBlockSize;
 	    			if(toolRand <= 0) {toolRand=1;}
 	    			if(toolVar <= 0) {toolVar=1;}
 	    			placeData(mx, my, 0);
 				}
 				
 				if (myFunction ==  2) { 
-					if(blockSize < 0) {blockSize=copyPasteBlockSize;}
+					blockSize=copyPasteBlockSize;
 	    			if(toolRand <= 0) {toolRand=1;}
 	    			if(toolVar <= 0) {toolVar=1;}
 	    			captureData(mx, my, 0);
@@ -443,7 +443,7 @@ public class ml extends JPanel implements MouseListener {
 		int[][][] resultAr;
 		resultAr = new int[blockSize][blockSize][1];
 		
-		String ss = "";
+		//String ss = "";
 		//use block placement descendent as capture device for u.universe
 		
 	    if(mx-(blockSize/2) >= 0 && my-(blockSize/2) > 0 && mx+(blockSize/2) < s.getWidth() && my+(blockSize/2) < s.getHeight()+1) {
@@ -461,9 +461,9 @@ public class ml extends JPanel implements MouseListener {
 				
 				for (int j = 0; j < intar.length; j++){
 					resultAr[j][i][0] = intar[j];
-		    	    ss+=intar[j] + ",";
+		    	    //ss+=intar[j] + ",";
 			    }
-				ss+="\n";
+				//ss+="\n";
 			} 
 			//System.out.println(ss);
 			 	
@@ -471,13 +471,13 @@ public class ml extends JPanel implements MouseListener {
 	    }
 	    
 	    
-	    ss="";
-	    for (int i = 0; i < resultAr.length; i++){
+	   // ss="";
+	    /*for (int i = 0; i < resultAr.length; i++){
 	    	for (int j = 0; j < resultAr[0].length; j++){
 	    	    ss+=resultAr[i][j][0] + ",";
 		    }
 	    	ss+="\n";
-	    }
+	    }*/
 	    //System.out.println(ss);
 	    
 	    

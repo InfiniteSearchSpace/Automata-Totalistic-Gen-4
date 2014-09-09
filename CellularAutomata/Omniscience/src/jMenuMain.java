@@ -79,11 +79,11 @@ public class jMenuMain implements ActionListener {
         
         menu.addSeparator();
         
-        menuItem = new JMenuItem("Capture Image");
+        menuItem = new JMenuItem("Export Bitmap Image");
         menuItem.addActionListener(this);
         menu.add(menuItem);
         
-        menuItem = new JMenuItem("Image Every ? Frames");
+        menuItem = new JMenuItem("Export Bitmap Every ? Frames");
         menuItem.addActionListener(this);
         menu.add(menuItem);
         
@@ -187,6 +187,23 @@ public class jMenuMain implements ActionListener {
         menuItem.addActionListener(this);
         menu.add(menuItem);
         
+        //create new menu
+        menu = new JMenu("Help");
+        menu.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY));
+        menuBar.add(menu);
+
+        menuItem = new JMenuItem("User Interface/Controls");
+        menuItem.addActionListener(this);
+        menu.add(menuItem);
+
+        menuItem = new JMenuItem("Cursor Tool Explanation");
+        menuItem.addActionListener(this);
+        menu.add(menuItem);
+        
+        menuItem = new JMenuItem("Editor/Stats");
+        menuItem.addActionListener(this);
+        menu.add(menuItem);
+        
         return menuBar;
     }
  
@@ -197,21 +214,22 @@ public class jMenuMain implements ActionListener {
 
         if(source.getText() == "Erase Layer") {mML.eraseLayer();}
         if(source.getText() == "Erase All") {mML.eraseAll();}
-        if(source.getText() == "Capture Image") {new getImage(a.u,"",-1);}
+        if(source.getText() == "Export Bitmap Image") {new getImage(a.u,"",-1);}
         
-        if(source.getText() == "Image Every ? Frames") {
+        if(source.getText() == "Export Bitmap Every ? Frames") {
+        	a.u.name();
         	
-        	String str = JOptionPane.showInputDialog(m, "Take a screenshot every x frames:", "16");
+        	String str = JOptionPane.showInputDialog(m, "Export Bitmap Image (*.bmp) every ? frames:", "16");
         	if(str != null) {
         		a.u.record = Integer.parseInt(str);
-    		}
+    		} else {a.u.record = 16;}
         	
         	str = JOptionPane.showInputDialog(m, "Pixel Magnification", "2");
         	if(str != null) {
         		a.u.recordZoom = Integer.parseInt(str);
-    		}
+    		} else {a.u.recordZoom = 2;}
         	
-        	a.u.name(); 
+        	 
         }
     	
         if(source.getText() == "Reseed Layer") 	{mML.reseedLayer(mML.seedRand, mML.seedVal);}
@@ -222,8 +240,23 @@ public class jMenuMain implements ActionListener {
         if(source.getText() == "Place Random Blocks") 	{mML.setFunctionType(1);setBlocks();mML.blockSize = -1;mML.toolRand = -1;mML.toolVar = -1;mML.resetVal = true;}
         if(source.getText() == "Erase Blocks") 			{mML.setFunctionType(2);setBlocks();mML.blockSize = -1;mML.toolRand = -1;mML.toolVar = -1;mML.resetVal = true;}
 
-        if(source.getText() == "Tool: Copy") 					{mML.setFunctionType(3);mML.myFunction = 2;setBlocks();mML.blockSize = -1;mML.toolRand = -1;mML.toolVar = -1;mML.resetVal = true;}
-        if(source.getText() == "Tool: Paste") 					{mML.setFunctionType(3);mML.myFunction = 1;setBlocks();mML.blockSize = -1;mML.toolRand = -1;mML.toolVar = -1;mML.resetVal = true;}
+        if(source.getText() == "Tool: Copy"){
+        	String str = JOptionPane.showInputDialog(m, "Copy Size:", "20");
+        	if(str != null) {
+        		mML.copyPasteBlockSize = Integer.parseInt(str);
+    		}
+        	
+        	mML.setFunctionType(3);mML.myFunction = 2;setBlocks();mML.blockSize = -1;mML.toolRand = -1;mML.toolVar = -1;mML.resetVal = true;
+        }
+        
+        if(source.getText() == "Tool: Paste"){
+        	String str = JOptionPane.showInputDialog(m, "Paste Size: \n(Must be identical to copy size)", "20");
+        	if(str != null) {
+        		mML.copyPasteBlockSize = Integer.parseInt(str);
+        	}
+        	
+    		mML.setFunctionType(3);mML.myFunction = 1;setBlocks();mML.blockSize = -1;mML.toolRand = -1;mML.toolVar = -1;mML.resetVal = true;
+		}
         
         if(source.getText() == "Set Tool Size") 				{mML.dialogSetBlockSize();}
         if(source.getText() == "Set Tool Value") 				{mML.dialogSetBlockVal();}
@@ -248,6 +281,24 @@ public class jMenuMain implements ActionListener {
         	//System.out.println("New Editor:" + a);
         	StatisticFrame SF = new StatisticFrame(mML, a);
         	SF.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        }
+        
+        if(source.getText() == "User Interface/Controls") 	{
+        	JOptionPane.showMessageDialog(null, "Right Click:\nPause/Unpause the main window.");
+        	JOptionPane.showMessageDialog(null, "Left Click:\nUse current cursor tool.\n[Default: Solid block placement]");
+        	JOptionPane.showMessageDialog(null, "Mousewheel Click:\nClears the main window.");
+        	JOptionPane.showMessageDialog(null, "Mousewheel Scrolling:\nCycle through the preset sub-options of the cursor tool.\n[Default: Solid block placement]");
+        }
+        
+        if(source.getText() == "Cursor Tool Explanation") 	{
+        	JOptionPane.showMessageDialog(null, "The following tools are used by left clicking on the main window.\nThey each have up to five sub-options, which can be cycled using the scrollwheel.");
+        	JOptionPane.showMessageDialog(null, "Place Solid Blocks:\n\nPlaces solid squares of different sizes.\n\nSingle cell\nSmall area\nSmall-Medium area\nMedium area\nLarge area");
+        	JOptionPane.showMessageDialog(null, "Place Random Blocks:\n\nPlaces randomised value, size, value-variation, and distributions of cells in square areas.\n\nMedium size, light random distribution, Values 0 or 1\nMedium size, light random distribution, Values 0 to 16\nNot Used\nNot Used\nSmall size, medium random distribution, Values -1 to 1");
+        	JOptionPane.showMessageDialog(null, "Erase Blocks:\nSets affected cells to 0.\n\nErase single cell\nSolid square, Small area\nSolid square, Large area\nRandom distribution, Medium area\nRandom distribution, Small area");
+        }
+        
+        if(source.getText() == "Editor/Stats") 	{
+        	JOptionPane.showMessageDialog(null, "The Editor and Stats menus create pop-out windows. They have their own help sections.\n\nThe Editor is for Copy/Paste pattern viewing & editing, Rule modification, and Neighbourhood modification.\nThe Stats window is a basic population graphing function.");
         }
         
         mML.refresh();

@@ -63,11 +63,7 @@ public class jMenuEditor implements ActionListener {
         
         //Populate menu
         
-        menuItem = new JMenuItem("Toggle Live Rule Updating");
-        menuItem.addActionListener(this);
-        menu.add(menuItem);
-        
-        menu.addSeparator();
+       
         
         menuItem = new JMenuItem("--> Get Neighbourhood");
         menuItem.addActionListener(this);
@@ -97,7 +93,37 @@ public class jMenuEditor implements ActionListener {
         menuItem.addActionListener(this);
         menu.add(menuItem);
         
+        menu.addSeparator();
         
+        menuItem = new JMenuItem("Toggle Live Rule Updating");
+        menuItem.addActionListener(this);
+        menu.add(menuItem);
+        
+        
+        
+        menu = new JMenu("Help");
+        menu.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY));
+        menuBar.add(menu);
+
+        menuItem = new JMenuItem("Controls & Interaction");
+        menuItem.addActionListener(this);
+        menu.add(menuItem);
+        
+        menuItem = new JMenuItem("Get & Set");
+        menuItem.addActionListener(this);
+        menu.add(menuItem);
+        
+        menuItem = new JMenuItem("Rule Layout");
+        menuItem.addActionListener(this);
+        menu.add(menuItem);
+        
+        menuItem = new JMenuItem("Neighbour Layout");
+        menuItem.addActionListener(this);
+        menu.add(menuItem);
+        
+        menuItem = new JMenuItem("Import/Export");
+        menuItem.addActionListener(this);
+        menu.add(menuItem);
         
         return menuBar;
     }
@@ -128,6 +154,39 @@ public class jMenuEditor implements ActionListener {
         if(source.getText() == "Toggle Live Rule Updating") {
         	 if(bLiveRuleUpdate == false) {bLiveRuleUpdate = true;} else {bLiveRuleUpdate = false;}
     	}
+        
+        
+        
+       /* "Rule Layout"
+        ""
+        ""*/
+        
+        if(source.getText() == "Controls & Interaction") {
+        	JOptionPane.showMessageDialog(null, "Left Click:\nIncrease the value of the cell by one.");
+        	JOptionPane.showMessageDialog(null, "Right Click:\nDecrease the value of the cell by one.");
+        	JOptionPane.showMessageDialog(null, "Middle Click:\nInsert the chosen value into the clicked cell.");
+        }
+        
+        if(source.getText() == "Get & Set") {
+        	JOptionPane.showMessageDialog(null, "The 'Get' functions will pull the current rule or neighbourhood into the editor, so it may be reconfigured.\nThe 'Set' functions confirm & apply changes made to a rule or neighbourhood.");
+        }
+        
+        if(source.getText() == "Rule Layout") {
+        	JOptionPane.showMessageDialog(null, "Rules encode the actions to perform, after the neighbourhood is assessed.");
+        	JOptionPane.showMessageDialog(null, "Rules are represented numerically, and structured as follows:\n\n[-2]           : Begin Rule.\n[#][#][#]  : Rule parameters.\n[     ...    ]  : Many parameter sets are allowed.\n[-3]           : End Rule.");
+        	JOptionPane.showMessageDialog(null, "Rule parameters are horizontal sets of three numbers, such as [6][8][1].\n\nThe rule above means: 'If there are 6, 7, or 8 of my neighbours who are not zero, set my value to 1.'");
+        }
+        
+        if(source.getText() == "Neighbour Layout") {
+        	JOptionPane.showMessageDialog(null, "Neighbourhoods encode the set of nearby cells to assess, in order to determine the next state of 'this' cell.");
+        	JOptionPane.showMessageDialog(null, "Neighbourhoods are represented numerically, and structured as follows:\n\n[1]  [1]  [1]\n[1]  [-1] [1]\n[1]  [1]  [1]\n\nThe value '1' represents a neighbour to assess.\nThe value '-1' represents the current cell, to whom the neighbourhood belongs.");
+        	
+        }
+        
+        if(source.getText() == "Import/Export") {
+        	JOptionPane.showMessageDialog(null, "Exporting a rule or neighbourhood will read the current state of the Editor, and convert it into a text format.\nThis can be saved for later use.");
+        	JOptionPane.showMessageDialog(null, "Importing a rule or neighbourhood will prompt the user to enter an Exported code, and will place the resulting object into the Editor.");
+          }
         
     }
  

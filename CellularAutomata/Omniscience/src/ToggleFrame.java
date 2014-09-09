@@ -17,12 +17,8 @@ public class ToggleFrame extends JFrame {
 	int gridSize = 20;
 	
 	public ToggleFrame(ml ML, automataLib aa) {
-		
-		if(ML.blockSize > 0) {
-			gridSize = ML.blockSize;
-		}
-		
-		String str = JOptionPane.showInputDialog(null, "Grid Size:", ML.blockSize);
+
+		String str = JOptionPane.showInputDialog(null, "Grid Size:", gridSize);
     	if(str != null) {
     		gridSize = Integer.parseInt(str);
 		}
@@ -71,16 +67,16 @@ public class ToggleFrame extends JFrame {
 	
 	public int [][] getPanelStates() {
 		int[][] output = new int[pp.length][pp[0].length];
-    	String ss = "";
+    	//String ss = "";
     	
     	for(int j = 0; j < pp.length; j++) {
     		for(int i = 0; i < pp[j].length; i++) {
     			
         		output[i][j] = pp[i][j].val;
-        		ss+=output[i][j] + ",";
+        		//ss+=output[i][j] + ",";
         		
         	}
-    		ss+="\n";
+    		//ss+="\n";
     	}
     	//System.out.println(ss);
     	return output;

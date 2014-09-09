@@ -48,7 +48,7 @@ public class Main extends JFrame {
 	public void setSizes(int xSize, int ySize, int zSize) {
 		
 		//minimum window frame lengths
-		int minMenuXLen = 380;
+		int minMenuXLen = 460;
         int minMenuYLen = 150;
         
 		//Textbox for info display

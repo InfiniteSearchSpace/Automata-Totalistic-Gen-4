@@ -61,7 +61,19 @@ public class jMenuStats implements ActionListener {
         menuItem.addActionListener(this);
         menu.add(menuItem);
         
+        //create new menu
+        menu = new JMenu("Help");
+        menu.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY));
+        menuBar.add(menu);
         
+        menuItem = new JMenuItem("Views");
+        menuItem.addActionListener(this);
+        menu.add(menuItem); 
+        
+        menuItem = new JMenuItem("Target");
+        menuItem.addActionListener(this);
+        menu.add(menuItem);
+    	
         return menuBar;
     }
  
@@ -73,7 +85,10 @@ public class jMenuStats implements ActionListener {
         if(source.getText() == "Relative") 			{SF.dp.absMinMax = false;}  
         
         if(source.getText() == "Population") 		{SF.dp.targetType = 0;}   
-        if(source.getText() == "New Births") 		{SF.dp.targetType = 1;}   
+        if(source.getText() == "New Births") 		{SF.dp.targetType = 1;}  
+
+        if(source.getText() == "Views") 		{JOptionPane.showMessageDialog(null, "Absolute: Remember the highest value reached, even when the current graph value range is far from it.\nRelative: Fit the graph to the full space allowed, by using the highest value on the graph only.");}   
+        if(source.getText() == "Target") 		{JOptionPane.showMessageDialog(null, "Population: Count each live cell.\nNew Births: Only count cells with the value 1.");}   
     }
  
     

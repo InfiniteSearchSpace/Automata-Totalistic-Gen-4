@@ -14,9 +14,13 @@ public class Universe {
 	int xlen;
 	int ylen;
 	int zlen; 
+	
 	int record = -1;
-	int recordCounter=1;
 	int recordZoom = 1;
+	
+	int recordCounter = 0;
+	int imageNumber = 0;
+	
 	Random r = new Random();
 	
 	public boolean paused = false;
@@ -45,6 +49,10 @@ public class Universe {
 	
 	
 	public void name() {
+		
+		recordCounter = 0;
+		imageNumber = 0;
+		
 		folder = String.valueOf(r.nextInt(10));
 		
 		for(int i = 0; i < 5; i++){
@@ -134,9 +142,12 @@ public class Universe {
 				}
 	    	}
 	    	
-	    	if(record != -1 && recordCounter%(record) == 0){
-				new GetVid(this, folder, recordCounter, recordZoom);
-				recordCounter++;
+	    	if(record != -1){
+	    		if(recordCounter%(record) == 0){
+	    			new GetVid(this, folder, imageNumber, recordZoom);
+	    			imageNumber++;
+	    		}
+	    		recordCounter++;
 			} 
 	    	
 	    	if(statsLive && statAr != null) {
