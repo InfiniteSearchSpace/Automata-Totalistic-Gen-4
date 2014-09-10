@@ -764,7 +764,7 @@ public class jMenuEditor implements ActionListener {
     public static void callPresets(File f) throws IOException {
     	if(!f.exists()) {
     		String presetGithubPath = "https://github.com/InfiniteSearchSpace/Automata-Totalistic-Gen-4/tree/master/CellularAutomata/Omniscience";
-    		JOptionPane.showInputDialog(null, "Automata Presets not found.\nDownload the 'Presets' plain text file, and place it in the same directory as this program:",presetGithubPath);
+    		JOptionPane.showInputDialog(null, "Automata Presets not found.\nDownload & copy the 'Presets' plain text file, and place it in the same directory as this program:",presetGithubPath);
     		SystemClip sysClip = new SystemClip(); 
         	sysClip.setSystemClip(presetGithubPath);
     	} else {
