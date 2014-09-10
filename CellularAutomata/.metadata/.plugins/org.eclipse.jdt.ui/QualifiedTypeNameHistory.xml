@@ -6,7 +6,6 @@
 <fullyQualifiedTypeName name="javax.swing.SwingConstants"/>
 <fullyQualifiedTypeName name="javax.swing.border.Border"/>
 <fullyQualifiedTypeName name="javax.swing.BorderFactory"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.awt.datatransfer.StringSelection"/>
 <fullyQualifiedTypeName name="java.awt.datatransfer.Clipboard"/>
 <fullyQualifiedTypeName name="java.awt.Toolkit"/>
@@ -15,4 +14,5 @@
 <fullyQualifiedTypeName name="java.awt.Component"/>
 <fullyQualifiedTypeName name="java.awt.PopupMenu"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>

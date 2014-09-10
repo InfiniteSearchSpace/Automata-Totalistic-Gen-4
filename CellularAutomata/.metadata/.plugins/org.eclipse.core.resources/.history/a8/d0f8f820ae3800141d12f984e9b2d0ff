@@ -142,7 +142,7 @@ public class DotPlot extends JPanel {
 	
 	
 	private void get_gvMinMax() {
-		if(viewType == 0) {
+		if(viewType == 1) {
 			gvMax = Integer.MIN_VALUE;
 			gvMin = Integer.MAX_VALUE;
 		}

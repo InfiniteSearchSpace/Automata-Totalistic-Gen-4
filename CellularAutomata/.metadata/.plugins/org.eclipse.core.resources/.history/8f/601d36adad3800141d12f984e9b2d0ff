@@ -22,6 +22,8 @@ public class DotPlot extends JPanel {
 	
 	int monotone = 255;
 	
+	boolean absMinMax = false;
+	
 	public DotPlot(int xx, int yy, int ww, int hh, Universe uu){
 		setSize(ww, hh);
     	setLocation(xx, yy);
@@ -142,7 +144,7 @@ public class DotPlot extends JPanel {
 	
 	
 	private void get_gvMinMax() {
-		if(viewType == 0) {
+		if(!absMinMax) {
 			gvMax = Integer.MIN_VALUE;
 			gvMin = Integer.MAX_VALUE;
 		}

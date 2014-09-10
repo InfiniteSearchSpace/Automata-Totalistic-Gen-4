@@ -17,7 +17,7 @@ public class DotPlot extends JPanel {
 	Universe u;
 	float gvMax = Integer.MIN_VALUE;
 	float gvMin = Integer.MAX_VALUE;
-	int viewType = 0;
+	int viewType = 1;
 	int targetType = 0;
 	
 	int monotone = 255;

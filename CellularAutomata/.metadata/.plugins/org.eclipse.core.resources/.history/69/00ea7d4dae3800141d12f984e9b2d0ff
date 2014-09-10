@@ -82,8 +82,8 @@ public class jMenuStats implements ActionListener {
     	
         JMenuItem source = (JMenuItem)(e.getSource());
   
-        if(source.getText() == "Absolute") 			{SF.dp.viewType = 1;} 	
-        if(source.getText() == "Relative") 			{SF.dp.viewType = 0;}  
+        if(source.getText() == "Absolute") 			{SF.dp.viewType = 0;} 	
+        if(source.getText() == "Relative") 			{SF.dp.viewType = 1;}  
          
         if(source.getText() == "Population") 		{SF.dp.targetType = 0;}   
         if(source.getText() == "New Births") 		{SF.dp.targetType = 1;}  

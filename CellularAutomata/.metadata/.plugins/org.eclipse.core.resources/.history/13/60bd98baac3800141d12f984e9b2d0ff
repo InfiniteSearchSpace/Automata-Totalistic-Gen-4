@@ -22,6 +22,8 @@ public class DotPlot extends JPanel {
 	
 	int monotone = 255;
 	
+	boolean absMinMax = false;
+	
 	public DotPlot(int xx, int yy, int ww, int hh, Universe uu){
 		setSize(ww, hh);
     	setLocation(xx, yy);
@@ -87,6 +89,28 @@ public class DotPlot extends JPanel {
 			    floats = Color.RGBtoHSB(monotone, monotone, monotone, floats);
 			    g2d.setColor(Color.getHSBColor(floats[0],floats[1],floats[2]));
 			    
+	        	//relative Multival
+	        	if(viewType == 3) {
+	        		for(int k = 1; k < 16; k++) {
+			        	if(graphVals[i]%k == 1) {
+			        		
+			        		if(
+			        				
+			        			getHeight()-j == (int) (
+			        				( ((float)graphVals[i]-gvMin) / (gvMax-gvMin) ) * ( (float)getHeight() ) 
+			        			) 
+			        			
+			        		) {
+			        			monotone = 0;//(int)((float)k/(float)16*(float)255);
+			        			floats = Color.RGBtoHSB(monotone, monotone, monotone, floats);
+			    			    g2d.setColor(Color.getHSBColor(floats[0],floats[1],floats[2]));
+			        		}
+			        		
+			        	}
+	        		}
+	        	}
+	        	
+			    
 
 			    //draw
 
@@ -139,10 +163,23 @@ public class DotPlot extends JPanel {
 		graphVals[graphVals.length-1] = population;
 	}
 	
-	
+	private void countModVal() {
+		getGraphVal_prepare();
+		
+		int population = 0;
+		for(int i = 0; i < uniAudit.length; i++) {
+			for (int j = 0; j < uniAudit[i].length; j++) {
+				for (int k = 0; k < uniAudit[i][j].length; k++) {
+					if(uniAudit[i][j][k] == 1) {population++;}
+				}
+			}
+    	}
+		
+		graphVals[graphVals.length-1] = population;
+	}
 	
 	private void get_gvMinMax() {
-		if(viewType == 0) {
+		if(!absMinMax) {
 			gvMax = Integer.MIN_VALUE;
 			gvMin = Integer.MAX_VALUE;
 		}

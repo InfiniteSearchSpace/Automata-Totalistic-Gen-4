@@ -48,6 +48,9 @@ public class jMenuStats implements ActionListener {
         menuItem.addActionListener(this);
         menu.add(menuItem);
         
+        menuItem = new JMenuItem("Mod 1 to 16");
+        menuItem.addActionListener(this);
+        menu.add(menuItem);
         
         //create new menu
         menu = new JMenu("Graph Target");
@@ -82,8 +85,9 @@ public class jMenuStats implements ActionListener {
     	
         JMenuItem source = (JMenuItem)(e.getSource());
   
-        if(source.getText() == "Absolute") 			{SF.dp.viewType = 1;} 	
-        if(source.getText() == "Relative") 			{SF.dp.viewType = 0;}  
+        if(source.getText() == "Absolute") 			{SF.dp.viewType = 0;} 	
+        if(source.getText() == "Relative") 			{SF.dp.viewType = 1;}  
+        if(source.getText() == "Mod 1 to 16") 		{SF.dp.viewType = 2;}  
          
         if(source.getText() == "Population") 		{SF.dp.targetType = 0;}   
         if(source.getText() == "New Births") 		{SF.dp.targetType = 1;}  

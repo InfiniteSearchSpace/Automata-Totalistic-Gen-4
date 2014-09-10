@@ -532,9 +532,6 @@ public class jMenuEditor implements ActionListener {
     		
     	
     	TF.updatePanelColors();
-    	
-    	//apply it
-    	setRule();
     }
     
     public void importNeighbourhood() {
@@ -653,10 +650,6 @@ public class jMenuEditor implements ActionListener {
     	TF.pp[centCell][centCell].setVal(-1);
     	
     	TF.updatePanelColors();
-    	
-    	//apply it
-    	bLiveRuleUpdate = false; 
-    	setNeighbourhood();
     }
     
     public void getNeighbourhood() {

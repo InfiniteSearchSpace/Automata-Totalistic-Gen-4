@@ -17,10 +17,12 @@ public class DotPlot extends JPanel {
 	Universe u;
 	float gvMax = Integer.MIN_VALUE;
 	float gvMin = Integer.MAX_VALUE;
-	int viewType = 0;
+	int viewMode = 0;
 	int targetType = 0;
 	
 	int monotone = 255;
+	
+	boolean absMinMax = false;
 	
 	public DotPlot(int xx, int yy, int ww, int hh, Universe uu){
 		setSize(ww, hh);
@@ -45,7 +47,6 @@ public class DotPlot extends JPanel {
     	
     	if(targetType == 0) {countPoplation();}
     	if(targetType == 1) {countNewBirths();}
-    	//if(targetType == 1) {countModeVal();}
     	
 	    
 	    get_gvMinMax();
@@ -53,40 +54,35 @@ public class DotPlot extends JPanel {
 	        for (int j = 0; j < getHeight(); j++) {
 	        	
 	        	monotone = 255;
-	        	//relative
-	        	if(viewType == 0) {
+	        	
+	        	if(viewMode == 0) {
 		        	if(graphVals[i] != 0) {
 		        		if(
-		        				
 		        			getHeight()-j == (int) (
 		        				( ((float)graphVals[i]-gvMin) / (gvMax-gvMin) ) * ( (float)getHeight() ) 
 		        			) 
-		        			
 		        		) {
 		        			monotone = 0;
 		        		}
 		        	}
 	        	}
 	        	
-	        	//absolute
-	        	if(viewType == 1) {
+	        	if(viewMode == 1) {
 	        		if(graphVals[i] != 0) {
 		        		if(
-		        				
 		        			getHeight()-j == (int) (
 		        				( ((float)graphVals[i]) / (gvMax) ) * ( (float)getHeight() ) 
 		        			) 
-		        			
 		        		) {
 		        			monotone = 0;
 		        		}
 		        	}
 	        	}
 	        	
-	        	//prepare to draw
+	        	
+			    //prepare to draw
 			    floats = Color.RGBtoHSB(monotone, monotone, monotone, floats);
 			    g2d.setColor(Color.getHSBColor(floats[0],floats[1],floats[2]));
-			    
 
 			    //draw
 
@@ -139,10 +135,8 @@ public class DotPlot extends JPanel {
 		graphVals[graphVals.length-1] = population;
 	}
 	
-	
-	
 	private void get_gvMinMax() {
-		if(viewType == 0) {
+		if(!absMinMax) {
 			gvMax = Integer.MIN_VALUE;
 			gvMin = Integer.MAX_VALUE;
 		}
