@@ -12,7 +12,10 @@ public class StatisticFrame extends JFrame {
 	
 	int pXCount = 0;
 	int pYCount = 0;
+	int panelSize = 16;
+	int lastsize = panelSize;
 	int maxPanelVal = 0;
+	int gridSize = 20;
 	
 	public StatisticFrame(ml ML, automataLib aa) {
 		
@@ -30,7 +33,7 @@ public class StatisticFrame extends JFrame {
 	
 	public void initSF(){
 		
-		int frameSize = 458;
+		int frameSize = 350;
 		
 		setLayout(null);
 		

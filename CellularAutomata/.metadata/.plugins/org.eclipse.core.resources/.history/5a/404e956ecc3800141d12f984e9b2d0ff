@@ -184,10 +184,10 @@ public class jMenuEditor implements ActionListener {
         
         if(source.getText() == "Open Rule Database File") { 
         	try {
-        		callPresets(new File("Presets"));
+        		callPresets(new File("*.*"));
         	} catch (IOException e1) {
         		// TODO Auto-generated catch block
-        		JOptionPane.showInputDialog(null, "Automata Presets not found.\nDownload & copy the 'Presets' plain text file, and place it in the same directory as this program:","");
+        		e1.printStackTrace();
         	} 
         }
         

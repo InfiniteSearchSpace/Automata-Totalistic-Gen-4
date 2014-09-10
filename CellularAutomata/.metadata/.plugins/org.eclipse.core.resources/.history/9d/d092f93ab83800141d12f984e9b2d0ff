@@ -73,16 +73,15 @@ public class jMenuMain implements ActionListener {
         menuItem.addActionListener(this);
         menu.add(menuItem);
         
-        menuItem = new JMenuItem("Nonuniform Seed");
-        menuItem.addActionListener(this);
-        menu.add(menuItem);
-        
         menu.addSeparator();
         
         menuItem = new JMenuItem("Set Seed");
         menuItem.addActionListener(this);
         menu.add(menuItem);
         
+        menuItem = new JMenuItem("Nonuniform Seed");
+        menuItem.addActionListener(this);
+        menu.add(menuItem);
         
         menu.addSeparator();
         

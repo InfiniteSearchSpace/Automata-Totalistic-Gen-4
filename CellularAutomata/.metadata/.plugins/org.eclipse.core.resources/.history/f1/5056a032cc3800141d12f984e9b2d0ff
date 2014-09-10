@@ -187,7 +187,7 @@ public class jMenuEditor implements ActionListener {
         		callPresets(new File("Presets"));
         	} catch (IOException e1) {
         		// TODO Auto-generated catch block
-        		JOptionPane.showInputDialog(null, "Automata Presets not found.\nDownload & copy the 'Presets' plain text file, and place it in the same directory as this program:","");
+        		e1.printStackTrace();
         	} 
         }
         

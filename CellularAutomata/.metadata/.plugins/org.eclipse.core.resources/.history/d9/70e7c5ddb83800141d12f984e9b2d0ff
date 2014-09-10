@@ -30,7 +30,7 @@ public class StatisticFrame extends JFrame {
 	
 	public void initSF(){
 		
-		int frameSize = 458;
+		int frameSize = 350+105;
 		
 		setLayout(null);
 		

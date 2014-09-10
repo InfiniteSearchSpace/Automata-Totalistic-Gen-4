@@ -15,4 +15,7 @@
 <fullyQualifiedTypeName name="java.awt.PopupMenu"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="java.awt.Desktop"/>
 </qualifiedTypeNameHistroy>
