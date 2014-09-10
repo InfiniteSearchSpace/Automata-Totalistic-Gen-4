@@ -36,10 +36,10 @@ public class Main extends JFrame {
     	}
     	
     	//prompt user for program dimensions
-    	 str = JOptionPane.showInputDialog(null, "Depth", z);
+    	/* str = JOptionPane.showInputDialog(null, "Depth", z);
     	if(str != null) {
     		z = Integer.parseInt(str);
-    	}
+    	}*/
     	
     	//Init
 		setSizes(x, y, z);

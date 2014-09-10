@@ -55,25 +55,31 @@ public class jMenuMain implements ActionListener {
         
         menu.addSeparator();
         
-        menuItem = new JMenuItem("Erase Layer");
+        /*menuItem = new JMenuItem("Erase Layer");
         menuItem.addActionListener(this);
-        menu.add(menuItem);
+        menu.add(menuItem);*/
         
         menuItem = new JMenuItem("Erase All");
         menuItem.addActionListener(this);
         menu.add(menuItem);
         
-        menu.addSeparator();
+        //menu.addSeparator();
 
-        menuItem = new JMenuItem("Reseed Layer");
+        /*menuItem = new JMenuItem("Reseed Layer");
         menuItem.addActionListener(this);
-        menu.add(menuItem);
+        menu.add(menuItem);*/
         
         menuItem = new JMenuItem("Reseed All");
         menuItem.addActionListener(this);
         menu.add(menuItem);
         
+        menu.addSeparator();
+        
         menuItem = new JMenuItem("Set Seed");
+        menuItem.addActionListener(this);
+        menu.add(menuItem);
+        
+        menuItem = new JMenuItem("Nonuniform Seed");
         menuItem.addActionListener(this);
         menu.add(menuItem);
         
@@ -161,9 +167,9 @@ public class jMenuMain implements ActionListener {
         menuItem.addActionListener(this);
         menu.add(menuItem);
         
-        menuItem = new JMenuItem("Z-layers");
+        /*menuItem = new JMenuItem("Z-layers");
         menuItem.addActionListener(this);
-        menu.add(menuItem);
+        menu.add(menuItem);*/
                 
         menuItem = new JMenuItem("Tool Size");
         menuItem.addActionListener(this);
@@ -232,9 +238,11 @@ public class jMenuMain implements ActionListener {
         	 
         }
     	
-        if(source.getText() == "Reseed Layer") 	{mML.reseedLayer(mML.seedRand, mML.seedVal);}
-        if(source.getText() == "Reseed All") 	{mML.reseedAll(mML.seedRand, mML.seedVal);}
-        if(source.getText() == "Set Seed") 		{mML.dialogReseed();}
+        if(source.getText() == "Reseed Layer") 		{mML.reseedLayer(mML.seedRand, mML.seedVal);}
+        if(source.getText() == "Reseed All") 		{mML.reseedAll(mML.seedRand, mML.seedVal);}
+        if(source.getText() == "Set Seed") 			{mML.dialogReseed();}
+        if(source.getText() == "Nonuniform Seed") 	{a.nonUniformSeed();}
+        
        
         if(source.getText() == "Place Solid Blocks") 	{mML.setFunctionType(0);setBlocks();mML.blockSize = -1;mML.toolRand = -1;mML.toolVar = -1;mML.resetVal = true;}
         if(source.getText() == "Place Random Blocks") 	{mML.setFunctionType(1);setBlocks();mML.blockSize = -1;mML.toolRand = -1;mML.toolVar = -1;mML.resetVal = true;}

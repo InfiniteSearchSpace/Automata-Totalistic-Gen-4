@@ -49,15 +49,15 @@ public class jMenuEditor implements ActionListener {
         menuItem.addActionListener(this);
         menu.add(menuItem);
         menu.addSeparator();
-        menuItem = new JMenuItem("--> Paste From Clip");
+        menuItem = new JMenuItem("Paste From Clip");
         menuItem.addActionListener(this);
         menu.add(menuItem);
         
-        menuItem = new JMenuItem("Copy To Clip -->");
+        menuItem = new JMenuItem("Copy To Clip");
         menuItem.addActionListener(this);
         menu.add(menuItem); 
         
-        menu = new JMenu("Rule Config");
+        menu = new JMenu("Automaton Config");
         menu.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY));
         menuBar.add(menu);
         
@@ -65,31 +65,21 @@ public class jMenuEditor implements ActionListener {
         
        
         
-        menuItem = new JMenuItem("--> Get Neighbourhood");
+        menuItem = new JMenuItem("Get Neighbourhood");
         menuItem.addActionListener(this);
         menu.add(menuItem);
         
-        menuItem = new JMenuItem("--> Get Rule");
-        menuItem.addActionListener(this);
-        menu.add(menuItem);
-        
-        menu.addSeparator();
-        
-        menuItem = new JMenuItem("Set Neighbourhood -->");
-        menuItem.addActionListener(this);
-        menu.add(menuItem);
-        
-        menuItem = new JMenuItem("Set Rule -->");
+        menuItem = new JMenuItem("Get Rule");
         menuItem.addActionListener(this);
         menu.add(menuItem);
         
         menu.addSeparator();
-
-        menuItem = new JMenuItem("Export Rule");
+        
+        menuItem = new JMenuItem("Set Neighbourhood");
         menuItem.addActionListener(this);
         menu.add(menuItem);
         
-        menuItem = new JMenuItem("Import Rule");
+        menuItem = new JMenuItem("Set Rule");
         menuItem.addActionListener(this);
         menu.add(menuItem);
         
@@ -99,6 +89,27 @@ public class jMenuEditor implements ActionListener {
         menuItem.addActionListener(this);
         menu.add(menuItem);
         
+        menu = new JMenu("Import/Export");
+        menu.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY));
+        menuBar.add(menu);
+        
+        menuItem = new JMenuItem("Export Neighbourhood");
+        menuItem.addActionListener(this);
+        menu.add(menuItem);
+        
+        menuItem = new JMenuItem("Export Rule");
+        menuItem.addActionListener(this);
+        menu.add(menuItem);
+        
+        menu.addSeparator();
+        
+        menuItem = new JMenuItem("Import Neighbourhood");
+        menuItem.addActionListener(this);
+        menu.add(menuItem);
+        
+        menuItem = new JMenuItem("Import Rule");
+        menuItem.addActionListener(this);
+        menu.add(menuItem);
         
         
         menu = new JMenu("Help");
@@ -135,21 +146,25 @@ public class jMenuEditor implements ActionListener {
         
         if(source.getText() == "Erase Panels") 				{bLiveRuleUpdate = false;TF.resetPanels();} 	
         
-        if(source.getText() == "--> Get Neighbourhood") 	{bLiveRuleUpdate = false;getNeighbourhood();} 	
+        if(source.getText() == "Get Neighbourhood") 	{bLiveRuleUpdate = false;getNeighbourhood();} 	
         
-        if(source.getText() == "--> Get Rule") 				{getRule();} 
+        if(source.getText() == "Get Rule") 				{getRule();} 
         
-        if(source.getText() == "--> Paste From Clip") 		{bLiveRuleUpdate = false;pasteFromClip();} 	
+        if(source.getText() == "Paste From Clip") 		{bLiveRuleUpdate = false;pasteFromClip();} 	
         
-        if(source.getText() == "Copy To Clip -->") 			{copyToClip();} 	
+        if(source.getText() == "Copy To Clip") 			{copyToClip();} 	
 
-        if(source.getText() == "Set Neighbourhood -->") 	{bLiveRuleUpdate = false; setNeighbourhood();}
+        if(source.getText() == "Set Neighbourhood") 	{bLiveRuleUpdate = false; setNeighbourhood();}
 
-        if(source.getText() == "Set Rule -->") 				{setRule();}
+        if(source.getText() == "Set Rule") 				{setRule();}
 
         if(source.getText() == "Import Rule") 				{importRule();}
         
         if(source.getText() == "Export Rule") 				{exportRule();}
+        
+        if(source.getText() == "Import Neighbourhood") 				{importNeighbourhood();}
+        
+        if(source.getText() == "Export Neighbourhood") 				{exportNeighbourhood();}
         
         if(source.getText() == "Toggle Live Rule Updating") {
         	 if(bLiveRuleUpdate == false) {bLiveRuleUpdate = true;} else {bLiveRuleUpdate = false;}
@@ -244,7 +259,9 @@ public class jMenuEditor implements ActionListener {
     }
     
     public void setNeighbourhood() {
+    	//set up data array, 
     	int[][][] intAr = new int[TF.pp.length][TF.pp[0].length][1];
+    	//and fill it from the editor's data
     	for(int i = 0; i < TF.pp.length; i++){
     		for(int j = 0; j < TF.pp[i].length; j++){
         		intAr[j][i][0] = TF.pp[j][i].val;
@@ -292,7 +309,21 @@ public class jMenuEditor implements ActionListener {
     		nbrhood[i][1]-=jj;
     	}
 
+    	//set the neighbourhood to the one just constructed 
     	a.n.NBH = nbrhood;
+    	
+    	
+    	/*String s = "";
+    	
+    	for(int i = 0; i < nbrhood.length; i++){
+    		s+=":";
+    		for(int j = 0; j < nbrhood[i].length; j++){
+        		s += nbrhood[i][j] + ",";
+        	}
+    	}
+    	
+    	System.out.println(s);*/
+    	
     }
     
     public void copyToClip() {
@@ -307,15 +338,19 @@ public class jMenuEditor implements ActionListener {
     }
     
     public void pasteFromClip(){
-    	TF.resetPanels();
-    	int[][][] intAr = ML.d.getArray();
-    	for(int i = 0; i < TF.pp.length; i++){
-    		for(int j = 0; j < TF.pp[i].length; j++){
-        		TF.pp[j][i].setVal(intAr[j][i][0]);
-        	}
+    	if(ML.copyPasteBlockSize == TF.gridSize) {
+	    	TF.resetPanels();
+	    	int[][][] intAr = ML.d.getArray();
+	    	for(int i = 0; i < TF.pp.length; i++){
+	    		for(int j = 0; j < TF.pp[i].length; j++){
+	        		TF.pp[j][i].setVal(intAr[j][i][0]);
+	        	}
+	    	}
+	    		
+	    	TF.updatePanelColors();
+    	} else {
+    		JOptionPane.showMessageDialog(null, "Cursor Size and Editor Size must be identical.\nEditor: " + TF.gridSize + "\nCursor Tool Size: " + ML.copyPasteBlockSize);
     	}
-    		
-    	TF.updatePanelColors();
     }
     
     public void getRule() {
@@ -397,7 +432,7 @@ public class jMenuEditor implements ActionListener {
     public void importRule() {
     	TF.resetPanels();
 
-    	String str = JOptionPane.showInputDialog(null, "Input Rule", ":,");
+    	String str = JOptionPane.showInputDialog(null, "Input Rule", "");
     	//:4,8,0,:3,3,1,:0,1,0, //CGoL
     	int ruleLines = 0;
     	
@@ -499,6 +534,124 @@ public class jMenuEditor implements ActionListener {
     	TF.updatePanelColors();
     }
     
+    public void importNeighbourhood() {
+    	TF.resetPanels();
+
+    	String str = JOptionPane.showInputDialog(null, "Input Neighbourhood", "");
+    	
+    	//:-1,-1,0,:-1,0,0,:-1,1,0,:0,-1,0,:0,1,0,:1,-1,0,:1,0,0,:1,1,0, //CGoL
+    	
+    	//:-1,-1,0,
+    	//:-1,0,0,
+    	//:-1,1,0,
+    	//:0,-1,0,
+    	//:0,1,0,
+    	//:1,-1,0,
+    	//:1,0,0,
+    	//:1,1,0, //CGoL
+    	
+    	int ruleLines = 0;
+    	
+    	for(int i = 0; i < str.length(); i++) {
+    		if(":".equals(str.substring(i, i+1))) {
+    			ruleLines++;
+    		}
+    	}
+    	
+    	//System.out.println(ruleLines);
+    	
+    	int xyz = 3;
+    	
+    	int[][] importedNbr = new int[ruleLines][xyz];
+    	
+    	int thisColon = 0;
+    	int nextColon = 0;
+    	int thisComma = 0;
+    	int nextComma = 0;
+    	
+    	//For each line to be parsed
+    	for(int i = 0; i < ruleLines; i++) {
+    		//Identify line start & end
+    		nextColon = str.indexOf(":", thisColon+1);
+    		if(nextColon == -1) {nextColon = str.length();}
+    		
+    		//set up colon debug printer
+    		/*String sOut = "TC:" + thisColon + " NC:" + nextColon+ " sOut: ";
+    		//for each character in the range between the current colon and the next colon (start of next line)
+    		for(int j = thisColon; j < nextColon; j++) {
+    			sOut += str.substring(j, j+1);
+    		}
+    		//Print the debug string
+    		System.out.println(sOut);*/
+    		
+    		//count commas
+			int commaLines = 0;
+	    	for(int j = thisColon; j < nextColon; j++) {
+	    		if(",".equals(str.substring(j, j+1))) {
+	    			commaLines++;
+	    		}
+	    	}
+	    	
+	    	if(commaLines != 3) {
+	    		JOptionPane.showMessageDialog(null,"Syntax Error: Three numbers ( [x][y][z] ) should be used. You used: " + commaLines + " on rule line: " + i + ".");
+	    	}	    	
+	    	
+	    	//Print debug comma string
+	    	//System.out.println("i"+i+" commas:" + commaLines);
+	    	
+	    	
+			//set up comma debug printer
+	    	thisComma = thisColon;
+			for(int j = 0; j < commaLines; j++) {
+				nextComma = str.indexOf(",", thisComma+1);
+	    		if(nextComma == -1) {nextComma = str.length();}
+	    		
+				//String sOut2 = "TCmm:" + thisComma + " NCmm:" + nextComma+ " sOut2: ";
+				String impNbrParam = "";
+				for(int k = thisComma+1; k < nextComma; k++) {
+	    			//sOut2 += str.substring(k, k+1);
+	    			
+	    			impNbrParam += str.substring(k, k+1);
+	    		}
+				//System.out.println(sOut2);
+				
+				//asign to rule array
+				importedNbr[i][j] = Integer.parseInt(impNbrParam);
+				
+				//Go for another round
+	    		thisComma = nextComma;
+			}
+			/**/
+	    	
+	    	
+			//Go for another round
+    		thisColon = nextColon;
+			
+    	}
+    	
+    	
+		/*String finalArrayDebugChecker = "";
+    		
+    	for(int i = 0; i < importedNbr.length; i++) {
+    		finalArrayDebugChecker += ":";
+    		for(int j = 0; j < importedNbr[i].length; j++) {
+    			finalArrayDebugChecker += importedNbr[i][j] + ",";
+    		}
+    	}
+    	System.out.println(finalArrayDebugChecker);*/
+    	
+    	
+     	int centCell = ((TF.pp.length/2)-1);
+     	
+    	for(int i = 0; i < importedNbr.length; i++){
+    		TF.pp[importedNbr[i][0]+centCell][importedNbr[i][1]+centCell].setVal(1);
+    	}
+    		
+    	TF.pp[centCell][centCell].setVal(-1);
+    	
+    	TF.updatePanelColors();
+    }
+    
     public void getNeighbourhood() {
     	TF.resetPanels();
      	int centCell = ((TF.pp.length/2)-1);
@@ -512,6 +665,71 @@ public class jMenuEditor implements ActionListener {
     	TF.updatePanelColors();
     }
     
+    public void exportNeighbourhood(){
+    	//set up data array, 
+    	int[][][] intAr = new int[TF.pp.length][TF.pp[0].length][1];
+    	//and fill it from the editor's data
+    	for(int i = 0; i < TF.pp.length; i++){
+    		for(int j = 0; j < TF.pp[i].length; j++){
+        		intAr[j][i][0] = TF.pp[j][i].val;
+        	}
+    	}
+    	
+    	//get the centre cell (-1)
+    	int ii=0; 
+    	int jj=0;
+    		
+    	for(int i = 0; i < TF.pp.length; i++){
+    		for(int j = 0; j < TF.pp[i].length; j++){
+        		if(intAr[i][j][0] == -1) {ii=i;jj=j;}
+        	}
+    	}
+    	
+    	//get number of == 1 cells
+    	int nbrCount = 0;
+    	for(int i = 0; i < TF.pp.length; i++){
+    		for(int j = 0; j < TF.pp[i].length; j++){
+        		if(intAr[j][i][0] == 1) {
+        			nbrCount++;
+        		}
+        	}
+    	}
+    		
+    	//get 1-cell locations
+    	nbrhood = new int[nbrCount][3];
+    	int placedNbr = nbrCount;
+    		
+    	for(int i = 0; i < TF.pp.length; i++){
+    		for(int j = 0; j < TF.pp[i].length; j++){
+        		if(intAr[i][j][0] == 1) {
+        			nbrhood[nbrCount-placedNbr][0]=i;
+        			nbrhood[nbrCount-placedNbr][1]=j;
+        			nbrhood[nbrCount-placedNbr][2] = 0;
+        			placedNbr--;
+        		}
+        	}
+    	}
+    		        		
+    	//transform cells by (-ii, -jj)
+    	for(int i = 0; i < nbrhood.length; i++){
+    		nbrhood[i][0]-=ii;
+    		nbrhood[i][1]-=jj;
+    	}
 
+    	String s = "";
+    	
+    	for(int i = 0; i < nbrhood.length; i++){
+    		s+=":";
+    		for(int j = 0; j < nbrhood[i].length; j++){
+        		s += nbrhood[i][j] + ",";
+        	}
+    	}
+    	
+    	System.out.println(s);
+    	
+    	JOptionPane.showInputDialog(null, "This is the text neighbourhood. It should be automatically copied to your system clipboard.\nIf not, copy (CTRL-C) it to the local clipboard, which will be cleared on program exit.", s);
+    	SystemClip sysClip = new SystemClip(); 
+    	sysClip.setSystemClip(s);
+    }
     
 }

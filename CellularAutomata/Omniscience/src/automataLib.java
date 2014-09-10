@@ -127,6 +127,54 @@ public class automataLib {
     	if(r.nextInt(rand) == 0) {placeval(xx, yy, zz, 1, val);}
     }
     
+    public void nonUniformSeed() {
+    	//Select several random points
+    	int numPoints = r.nextInt((int)Math.sqrt((double)u.universe.length))+5;
+    	int[][] centerPoints = new int[numPoints][3];
+    	for(int i = 0; i < numPoints; i++) {
+    		for(int j = 0; j < 2; j++) {
+    	    	centerPoints[i][j] = r.nextInt(u.universe.length);
+    		}
+    	}
+    	
+    	//Each point has a random 'strength' value
+    	for(int i = 0; i < numPoints; i++) {
+    		centerPoints[i][2] = r.nextInt(500)+300;
+    	}
+    	
+    	//Random chance to place seeded cell is a function of the distance from the closest seedpoint in a square hitbox
+    	
+    	
+    	
+    	for(int i = 0; i < u.universe.length; i++) {
+			for (int j = 0; j < u.universe[i].length; j++) {
+				//for (int k = 0; k < u.universe[i][j].length; k++) {
+					
+					int nearestPoint = r.nextInt(centerPoints.length);
+					
+					int xLen = 1;
+			    	int yLen = 1;
+			    	int distToPoint = 1;
+			    	
+					for(int l = 0; l < 10; l++) {
+				    	xLen = Math.abs(i - centerPoints[nearestPoint][0]);
+				    	yLen = Math.abs(j - centerPoints[nearestPoint][1]);
+				    	distToPoint = xLen+yLen;
+				    	if(distToPoint > 128) {nearestPoint = r.nextInt(centerPoints.length);} else {break;}
+				    }
+			    	
+					int rand = (distToPoint*distToPoint)/(centerPoints[nearestPoint][2])+1;
+
+					
+			    	seed(i,j,0,rand,-1,1);
+				//}
+			}
+    	}
+    		//if equal distance, roll a dice
+    	//overlay a light normal random seed
+    	//create solid and empty regions
+    }
+    
     //with chance, reset pixel to val, applies to whole universe
     public void seedAll(int rand, int val, int rndVar){
     	

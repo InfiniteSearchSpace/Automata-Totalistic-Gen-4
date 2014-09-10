@@ -40,7 +40,7 @@ public class ToggleFrame extends JFrame {
 		int frx = frameSize+8+8;
 		int fry = frameSize+30+22+8;
 
-		if(frx < 96) { frx = 96; }
+		if(frx < 400) { frx = 400; }
 		if(fry < 96) { fry = 96; }
 		setSize(frx, fry);
 		
