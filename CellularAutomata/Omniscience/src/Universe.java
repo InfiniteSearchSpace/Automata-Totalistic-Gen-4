@@ -21,6 +21,8 @@ public class Universe {
 	int recordCounter = 0;
 	int imageNumber = 0;
 	
+	int genNumber = 0;
+	
 	Random r = new Random();
 	
 	public boolean paused = false;
@@ -153,6 +155,9 @@ public class Universe {
 	    	if(statsLive && statAr != null) {
 	    		statAr.updateGraph();
 	    	}
+	    	
+	    	genNumber++;
+	    	
 	    	
     	}
     }

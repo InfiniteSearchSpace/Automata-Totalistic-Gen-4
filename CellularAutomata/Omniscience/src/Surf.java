@@ -25,6 +25,7 @@ public class Surf extends JPanel {
     //config
     public boolean paused = true; 		//boolean that vetos display progression
     public boolean upaused = true; 		//boolean that vetos universe progression
+    public int stepFrames = 0;
     int zdraw = 0; 						//which z layer do I show, if z is a fixed reference?
     int colourScheme = -1;
     
@@ -54,7 +55,7 @@ public class Surf extends JPanel {
     private void doDrawing(Graphics g) { 
     	//Begin Draw configuration
     	
-    	if(!upaused) {u.updateUniverse();} 	//perform a full cycle of logical iteration
+    	if(!upaused || stepFrames > 0) {u.updateUniverse();} 	//perform a full cycle of logical iteration
     	
 	    u.maxValAudit(zdraw); 				//only audit maxval for this z-value
 	    Graphics2D g2d = (Graphics2D) g; 	//some sort of magic.
@@ -165,6 +166,9 @@ public class Surf extends JPanel {
 	    	paused = true;
 	    	repaint();
 	    } else { repaint(); }
+	    
+	    if(stepFrames > 0) {stepFrames--;}
+	    
        //End Drawing cycle
     }
    

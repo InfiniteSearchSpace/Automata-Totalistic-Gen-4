@@ -52,13 +52,15 @@ public class jMenuEditor implements ActionListener {
         menuItem.addActionListener(this);
         menu.add(menuItem);
         menu.addSeparator();
-        menuItem = new JMenuItem("Paste From Clip");
-        menuItem.addActionListener(this);
-        menu.add(menuItem);
         
         menuItem = new JMenuItem("Copy To Clip");
         menuItem.addActionListener(this);
         menu.add(menuItem); 
+        
+        menuItem = new JMenuItem("Paste From Clip");
+        menuItem.addActionListener(this);
+        menu.add(menuItem);
+        
         
         menu = new JMenu("Automaton Config");
         menu.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY));
@@ -68,23 +70,25 @@ public class jMenuEditor implements ActionListener {
         
        
         
-        menuItem = new JMenuItem("Get Neighbourhood");
-        menuItem.addActionListener(this);
-        menu.add(menuItem);
-        
         menuItem = new JMenuItem("Get Rule");
         menuItem.addActionListener(this);
         menu.add(menuItem);
         
+        menuItem = new JMenuItem("Get Neighbourhood");
+        menuItem.addActionListener(this);
+        menu.add(menuItem);
+        
+        
         menu.addSeparator();
+        
+        menuItem = new JMenuItem("Set Rule");
+        menuItem.addActionListener(this);
+        menu.add(menuItem);
         
         menuItem = new JMenuItem("Set Neighbourhood");
         menuItem.addActionListener(this);
         menu.add(menuItem);
         
-        menuItem = new JMenuItem("Set Rule");
-        menuItem.addActionListener(this);
-        menu.add(menuItem);
         
         menu.addSeparator();
         
@@ -92,33 +96,48 @@ public class jMenuEditor implements ActionListener {
         menuItem.addActionListener(this);
         menu.add(menuItem);
         
+        menu.add(menuItem);menu.addSeparator();
+        
+        menuItem = new JMenuItem("[Override] Toggle Animated Neighbourhood");
+        menuItem.addActionListener(this);
+        menu.add(menuItem);
+        
+        
+        
+        
+        
+        
         menu = new JMenu("Import/Export");
         menu.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY));
         menuBar.add(menu);
+        
+         menuItem = new JMenuItem("Import Rule");
+        menuItem.addActionListener(this);
+        menu.add(menuItem);
+        
+        menuItem = new JMenuItem("Import Neighbourhood");
+        menuItem.addActionListener(this);
+        menu.add(menuItem);
+       
+        
+        menu.addSeparator();
+        menuItem = new JMenuItem("Export Rule");
+        menuItem.addActionListener(this);
+        menu.add(menuItem);
         
         menuItem = new JMenuItem("Export Neighbourhood");
         menuItem.addActionListener(this);
         menu.add(menuItem);
         
-        menuItem = new JMenuItem("Export Rule");
-        menuItem.addActionListener(this);
-        menu.add(menuItem);
         
         menu.addSeparator();
-        
-        menuItem = new JMenuItem("Import Neighbourhood");
-        menuItem.addActionListener(this);
-        menu.add(menuItem);
-        
-        menuItem = new JMenuItem("Import Rule");
-        menuItem.addActionListener(this);
-        menu.add(menuItem);
-        
-        menu.addSeparator();
+         
+       
 
         menuItem = new JMenuItem("Open Rule Database File");
         menuItem.addActionListener(this);
         menu.add(menuItem);
+        
         
         
         
@@ -177,6 +196,8 @@ public class jMenuEditor implements ActionListener {
         
         if(source.getText() == "Export Neighbourhood") 				{exportNeighbourhood();}
         
+        if(source.getText() == "[Override] Toggle Animated Neighbourhood") 	{if(a.bAnimNbr == false) {a.bAnimNbr = true;} else {a.bAnimNbr = false;}}
+        
         if(source.getText() == "Toggle Live Rule Updating") {
         	 if(bLiveRuleUpdate == false) {bLiveRuleUpdate = true;} else {bLiveRuleUpdate = false;}
     	}
@@ -184,7 +205,7 @@ public class jMenuEditor implements ActionListener {
         
         if(source.getText() == "Open Rule Database File") { 
         	try {
-        		callPresets(new File("Presets"));
+        		callPresets(new File("Presets.txt"));
         	} catch (IOException e1) {
         		// TODO Auto-generated catch block
         	}

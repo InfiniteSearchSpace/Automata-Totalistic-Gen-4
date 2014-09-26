@@ -53,6 +53,10 @@ public class jMenuMain implements ActionListener {
         menuItem.addActionListener(this);
         menu.add(menuItem);
         
+        menuItem = new JMenuItem("Step Frame");
+        menuItem.addActionListener(this);
+        menu.add(menuItem);
+        
         menu.addSeparator();
         
         /*menuItem = new JMenuItem("Erase Layer");
@@ -218,6 +222,7 @@ public class jMenuMain implements ActionListener {
         JMenuItem source = (JMenuItem)(e.getSource());
         
         if(source.getText() == "Play/Pause") {mML.toggleStart();}
+        if(source.getText() == "Step Frame") {mML.stepFrames();}
 
         if(source.getText() == "Erase Layer") {mML.eraseLayer();}
         if(source.getText() == "Erase All") {mML.eraseAll();}

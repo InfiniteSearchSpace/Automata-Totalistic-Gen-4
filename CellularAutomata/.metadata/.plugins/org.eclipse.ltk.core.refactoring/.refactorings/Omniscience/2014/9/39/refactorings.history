@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;neighbours.java&apos; to &apos;neighbours.java&apos;&#x0A;- Original project: &apos;Omniscience&apos;&#x0A;- Destination element: &apos;neighbours.java&apos;&#x0A;- Original element: &apos;neighbours.java&apos;" description="Copy compilation unit" destination="/src&lt;{neighbours.java" element1="/src&lt;{neighbours.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1411350127654" units="1" version="1.0"/>
+</session>

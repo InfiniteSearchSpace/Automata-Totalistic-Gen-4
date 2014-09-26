@@ -13,14 +13,13 @@ public class automataLib {
 	
 	//used to define neighbourhoods
 	neighbours n; 
+	Anim_nbrs an;
 	
 	//Global vars that hold the size of the world array
 	int m_xSize;
 	int m_ySize;
 	
-	
-	//holds the rule actions to perform
-	int[][] instructions; 
+	boolean bAnimNbr = false;
 	
 	//holds the rule as defined in the toggleframe (default CGoL)
 	//						Rule Line 0 - 2
@@ -31,6 +30,7 @@ public class automataLib {
 	public automataLib(Main mm, int xSize, int ySize) {
 		m = mm;
 		n= new neighbours(0);
+		an= new Anim_nbrs(0);
 		m_xSize=xSize;
 		m_ySize=ySize;
 	}
@@ -216,6 +216,17 @@ public class automataLib {
 		return isOne;
 	}
 	 
+	
+	public int nbrCountNotVal_Animated(int xx, int yy, int zz, int val){
+		int isOne = 0;
+		int numFrames = an.NBH.length;
+		
+		for(int i = 0; i < an.NBH[numFrames-1].length; i++) {
+			if(u.snapshotUniverse[getWrap(xx, an.NBH[u.genNumber%numFrames][i][0], u.universe.length)][getWrap(yy, an.NBH[u.genNumber%numFrames][i][1], u.universe[0].length)][getWrap(zz, an.NBH[u.genNumber%numFrames][i][2], u.universe[0][0].length)] != val) {isOne++;}
+		}
+		
+		return isOne;
+	}
 	 
 	
 	/*  = = = = = = = = = = = = = = = = = = = = 
@@ -236,8 +247,10 @@ public class automataLib {
 
 	
 	public void arrayRuleIncrement(int xx, int yy, int zz){
-
-		int nbrCount = nbrCountNotVal(xx,yy,zz,0);
+		int nbrCount = 0;
+		if(!bAnimNbr){nbrCount = nbrCountNotVal(xx,yy,zz,0);} else {
+			nbrCount = nbrCountNotVal_Animated(xx,yy,zz,0);
+		}
 		
 		for(int i = 0; i < arTF_Ruleset.length; i++) {
 			if(nbrCount >= arTF_Ruleset[i][0] && nbrCount <= arTF_Ruleset[i][1]) {
