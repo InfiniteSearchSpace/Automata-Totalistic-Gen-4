@@ -567,7 +567,7 @@ public class jMenuEditor implements ActionListener {
     	TF.pp[1][start].setVal(-2);
     	TF.pp[1][end].setVal(-3);
     	
-    	a.arTF_Ruleset = new int[(end-start)-1][3];
+    	a.arTF_Ruleset = new int[end-start][3];
     	
     	for(int i = 0; i < a.arTF_Ruleset.length; i++){
     		for(int j = 0; j < a.arTF_Ruleset[i].length; j++){
