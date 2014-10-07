@@ -221,8 +221,8 @@ public class jMenuMain implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         JMenuItem source = (JMenuItem)(e.getSource());
         
-        if(source.getText() == "Play/Pause") {mML.toggleStart();}
-        if(source.getText() == "Step Frame") {mML.stepFrames();}
+        if(source.getText() == "Play/Pause") {mML.toggleStart();mML.bStepFrame = false;}
+        if(source.getText() == "Step Frame") {mML.stepFrames();mML.bStepFrame = true;}
 
         if(source.getText() == "Erase Layer") {mML.eraseLayer();}
         if(source.getText() == "Erase All") {mML.eraseAll();}
@@ -307,7 +307,7 @@ public class jMenuMain implements ActionListener {
         if(source.getText() == "Cursor Tool Explanation") 	{
         	JOptionPane.showMessageDialog(null, "The following tools are used by left clicking on the main window.\nThey each have up to five sub-options, which can be cycled using the scrollwheel.");
         	JOptionPane.showMessageDialog(null, "Place Solid Blocks:\n\nPlaces solid squares of different sizes.\n\nSingle cell\nSmall area\nSmall-Medium area\nMedium area\nLarge area");
-        	JOptionPane.showMessageDialog(null, "Place Random Blocks:\n\nPlaces randomised value, size, value-variation, and distributions of cells in square areas.\n\nMedium size, light random distribution, Values 0 or 1\nMedium size, light random distribution, Values 0 to 16\nNot Used\nNot Used\nSmall size, medium random distribution, Values -1 to 1");
+        	JOptionPane.showMessageDialog(null, "Place Random Blocks:\n\nPlaces randomised value, size, value-variation, and distributions of cells in square areas.\n\nMedium size, light random distribution, Values 0 or 1\nMedium size, light random distribution, Values 0 to 16\n\"SquareTest\": Places squares that increase size by 1 each use\nNot Used\nSmall size, medium random distribution, Values -1 to 1");
         	JOptionPane.showMessageDialog(null, "Erase Blocks:\nSets affected cells to 0.\n\nErase single cell\nSolid square, Small area\nSolid square, Large area\nRandom distribution, Medium area\nRandom distribution, Small area");
         }
         

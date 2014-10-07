@@ -96,11 +96,11 @@ public class jMenuEditor implements ActionListener {
         menuItem.addActionListener(this);
         menu.add(menuItem);
         
-        menu.add(menuItem);menu.addSeparator();
+       /* menu.add(menuItem);menu.addSeparator();
         
         menuItem = new JMenuItem("[Override] Toggle Animated Neighbourhood");
         menuItem.addActionListener(this);
-        menu.add(menuItem);
+        menu.add(menuItem);*/
         
         
         
@@ -196,7 +196,7 @@ public class jMenuEditor implements ActionListener {
         
         if(source.getText() == "Export Neighbourhood") 				{exportNeighbourhood();}
         
-        if(source.getText() == "[Override] Toggle Animated Neighbourhood") 	{if(a.bAnimNbr == false) {a.bAnimNbr = true;} else {a.bAnimNbr = false;}}
+       // if(source.getText() == "[Override] Toggle Animated Neighbourhood") 	{if(a.bAnimNbr == false) {a.bAnimNbr = true;} else {a.bAnimNbr = false;}}
         
         if(source.getText() == "Toggle Live Rule Updating") {
         	 if(bLiveRuleUpdate == false) {bLiveRuleUpdate = true;} else {bLiveRuleUpdate = false;}
@@ -571,7 +571,7 @@ public class jMenuEditor implements ActionListener {
     	
     	for(int i = 0; i < a.arTF_Ruleset.length; i++){
     		for(int j = 0; j < a.arTF_Ruleset[i].length; j++){
-    			System.out.println("DEBUG:" + " i:"+ i + " j:"+ j + " a.arTF_Ruleset.length:"+ a.arTF_Ruleset.length + " a.arTF_Ruleset[i].length:" + a.arTF_Ruleset[i].length + " end-start:" + (end-start));
+    			//System.out.println("DEBUG:" + " i:"+ i + " j:"+ j + " a.arTF_Ruleset.length:"+ a.arTF_Ruleset.length + " a.arTF_Ruleset[i].length:" + a.arTF_Ruleset[i].length + " end-start:" + (end-start));
 	    		TF.pp[j+1][i+start+1].setVal(importedRule[i][j]);
     		}
     	}

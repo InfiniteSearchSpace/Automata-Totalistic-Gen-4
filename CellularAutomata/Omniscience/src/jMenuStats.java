@@ -48,6 +48,12 @@ public class jMenuStats implements ActionListener {
         menuItem.addActionListener(this);
         menu.add(menuItem);
         
+        menu.addSeparator();
+        
+        menuItem = new JMenuItem("Clear Data");
+        menuItem.addActionListener(this);
+        menu.add(menuItem);
+        
         
         //create new menu
         menu = new JMenu("Graph Target");
@@ -57,8 +63,12 @@ public class jMenuStats implements ActionListener {
         menuItem = new JMenuItem("Population");
         menuItem.addActionListener(this);
         menu.add(menuItem);
-        
+
         menuItem = new JMenuItem("New Births");
+        menuItem.addActionListener(this);
+        menu.add(menuItem);
+        
+        menuItem = new JMenuItem("Frequency");
         menuItem.addActionListener(this);
         menu.add(menuItem);
         
@@ -86,10 +96,14 @@ public class jMenuStats implements ActionListener {
         if(source.getText() == "Relative") 			{SF.dp.viewType = 0;}  
          
         if(source.getText() == "Population") 		{SF.dp.targetType = 0;}   
-        if(source.getText() == "New Births") 		{SF.dp.targetType = 1;}  
+        if(source.getText() == "New Births") 		{SF.dp.targetType = 1;}   
+        if(source.getText() == "Frequency") 		{SF.dp.targetType = 2;}  
 
         if(source.getText() == "Views") 		{JOptionPane.showMessageDialog(null, "Absolute: Remember the highest value reached, even when the current graph value range is far from it.\nRelative: Fit the graph to the full space allowed, by using the highest value on the graph only.");}   
-        if(source.getText() == "Target") 		{JOptionPane.showMessageDialog(null, "Population: Count each live cell.\nNew Births: Only count cells with the value 1.");}   
+        if(source.getText() == "Target") 		{JOptionPane.showMessageDialog(null, "Population: Count each live cell.\nNew Births: Only count cells with the value 1.\nFrequency: Plots the frequency of Age-Values of cells in the specified range");}   
+        
+        if(source.getText() == "Clear Data") {SF.dp.clearGraph();}
+    
     }
  
     

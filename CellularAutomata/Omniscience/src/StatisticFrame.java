@@ -30,15 +30,15 @@ public class StatisticFrame extends JFrame {
 	
 	public void initSF(){
 		
-		int frameSize = 458;
+		int frameSize = a.m.getWidth();
 		
 		setLayout(null);
 		
-		setSize(frameSize, 200);
+		setSize(frameSize, 250);
 		
 		setVisible(true);
 		setResizable(false);
-		setLocation(96, 32);
+		setLocation(96, a.m.getHeight()+34);
 		
 		
 

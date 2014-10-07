@@ -49,6 +49,8 @@ public class ml extends JPanel implements MouseListener {
 	
 	boolean resetVal = true;
 	
+	int squareTest_BlockNum = 1;
+	boolean bStepFrame = false;
 	
 	//constructor
     public ml(Main mm, Surf ss, JLabel ll) {
@@ -137,8 +139,14 @@ public class ml extends JPanel implements MouseListener {
 					placeBlock(mx, my, 0);
 	    		}
 	    		
-	    		if (myFunction ==  2) { //Place Big Block Horizontal 3-step Stripes
-
+	    		if (myFunction ==  2) { //Square Test
+	    			blockSize=squareTest_BlockNum;
+	    			squareTest_BlockNum++;
+	    			toolRand=1;
+	    			toolVar=1;
+	    			blockVal = 1;
+	    			resetVal=false;
+	    			placeBlock(mx, my, 0);
 	        	}
 	    		
 	    		if (myFunction ==  3) { //Place medium Block 2-step Stripes
@@ -231,12 +239,13 @@ public class ml extends JPanel implements MouseListener {
 
     	//Right Click - Pause controller
     	if(e != null && e.getButton() == MouseEvent.BUTTON3) { 
-    		toggleStart();
+    		if(bStepFrame) {stepFrames();} else {toggleStart();}
     	}
     	
     	//middle click: erase layer
     	if(e != null && e.getButton() == MouseEvent.BUTTON2){
     		eraseLayer();
+    		squareTest_BlockNum = 1;
     	}
     	
     	refresh();
@@ -303,6 +312,8 @@ public class ml extends JPanel implements MouseListener {
 			mwPos+=(mwMax-1);
 			mwPos=mwPos%mwMax; 
 		}
+    	
+    	squareTest_BlockNum = 1;
     	
     	setCycle();
     	

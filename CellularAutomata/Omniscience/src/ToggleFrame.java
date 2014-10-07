@@ -47,7 +47,7 @@ public class ToggleFrame extends JFrame {
 		
 		setVisible(true);
 		setResizable(false);
-		setLocation(96, 32);
+		setLocation(a.m.getWidth()+100, 32);
 		
 		int panelsX = (frameSize/(panelSize+1));
 		int panelsY = (frameSize/(panelSize+1));

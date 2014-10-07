@@ -227,6 +227,16 @@ public class automataLib {
 		
 		return isOne;
 	}
+	
+	public int nbrSum(int xx, int yy, int zz, int val){
+		int isOne = 0;
+
+		for(int i = 0; i < n.NBH.length; i++) {
+			isOne += u.snapshotUniverse[getWrap(xx, n.NBH[i][0], u.universe.length)][getWrap(yy, n.NBH[i][1], u.universe[0].length)][getWrap(zz, n.NBH[i][2], u.universe[0][0].length)];
+		}
+		
+		return isOne;
+	}
 	 
 	
 	/*  = = = = = = = = = = = = = = = = = = = = 
@@ -248,14 +258,19 @@ public class automataLib {
 	
 	public void arrayRuleIncrement(int xx, int yy, int zz){
 		int nbrCount = 0;
-		if(!bAnimNbr){nbrCount = nbrCountNotVal(xx,yy,zz,0);} else {
-			nbrCount = nbrCountNotVal_Animated(xx,yy,zz,0);
-		}
+		/*if(!bAnimNbr){*/
+		
+		nbrCount = nbrCountNotVal(xx,yy,zz,0);
+		
+		/*} else {
+			nbrCount = nbrSum(xx,yy,zz,0);/*nbrCountNotVal_Animated(xx,yy,zz,0);*/
+		/*}*/
 		
 		for(int i = 0; i < arTF_Ruleset.length; i++) {
 			if(nbrCount >= arTF_Ruleset[i][0] && nbrCount <= arTF_Ruleset[i][1]) {
 				if(arTF_Ruleset[i][2] != 0) {
-					u.universe[xx][yy][zz] += arTF_Ruleset[i][2]; 
+					u.universe[xx][yy][zz] += arTF_Ruleset[i][2]; //increment
+					//u.universe[xx][yy][zz] = arTF_Ruleset[i][2]; //set
 				} else {
 					u.universe[xx][yy][zz]=0;
 				}
