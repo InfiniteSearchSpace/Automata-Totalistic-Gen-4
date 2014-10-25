@@ -259,7 +259,7 @@ public class automataLib {
 	public void arrayRuleIncrement(int xx, int yy, int zz){
 		int nbrCount = 0;
 		/*if(!bAnimNbr){*/
-		
+		//if(u.snapshotUniverse[xx][yy][zz] == 0){
 		nbrCount = nbrCountNotVal(xx,yy,zz,0);
 		
 		/*} else {
@@ -276,6 +276,7 @@ public class automataLib {
 				}
 			}
 		}
+		//}
 	}
 		
 	/////////////////////////////////////////////

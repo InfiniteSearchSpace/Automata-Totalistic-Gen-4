@@ -120,6 +120,11 @@ public class jMenuMain implements ActionListener {
 
         menu.addSeparator();
         
+        menuItem = new JMenuItem("Do Squaretest");
+        menuItem.addActionListener(this);
+        menu.add(menuItem);
+        
+        menu.addSeparator();
         menuItem = new JMenuItem("Set Tool Size");
         menuItem.addActionListener(this);
         menu.add(menuItem);
@@ -231,7 +236,7 @@ public class jMenuMain implements ActionListener {
         if(source.getText() == "Export Bitmap Every ? Frames") {
         	a.u.name();
         	
-        	String str = JOptionPane.showInputDialog(m, "Export Bitmap Image (*.bmp) every ? frames:", "16");
+        	String str = JOptionPane.showInputDialog(m, "Export Bitmap Image (*.bmp) every ? frames:", "1");
         	if(str != null) {
         		a.u.record = Integer.parseInt(str);
     		} else {a.u.record = 16;}
@@ -253,6 +258,7 @@ public class jMenuMain implements ActionListener {
         if(source.getText() == "Place Solid Blocks") 	{mML.setFunctionType(0);setBlocks();mML.blockSize = -1;mML.toolRand = -1;mML.toolVar = -1;mML.resetVal = true;}
         if(source.getText() == "Place Random Blocks") 	{mML.setFunctionType(1);setBlocks();mML.blockSize = -1;mML.toolRand = -1;mML.toolVar = -1;mML.resetVal = true;}
         if(source.getText() == "Erase Blocks") 			{mML.setFunctionType(2);setBlocks();mML.blockSize = -1;mML.toolRand = -1;mML.toolVar = -1;mML.resetVal = true;}
+        if(source.getText() == "Do Squaretest") 		{mML.setFunctionType(1);mML.myFunction=2;}
 
         if(source.getText() == "Tool: Copy"){
         	String str = JOptionPane.showInputDialog(m, "Copy Size:", "20");

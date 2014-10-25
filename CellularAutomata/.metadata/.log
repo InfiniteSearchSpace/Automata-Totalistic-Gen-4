@@ -309,3 +309,51 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64
 
 !ENTRY org.eclipse.core.resources 2 10035 2014-09-28 10:36:27.342
 !MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2014-10-19 13:40:32.081 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_NZ
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2014-10-19 13:40:41.903
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2014-10-25 13:28:58.586 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_NZ
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.ui.ide 4 4 2014-10-25 17:47:06.566
+!MESSAGE Problems saving workspace
+
+!ENTRY org.eclipse.ui.ide 4 1 2014-10-25 17:47:06.586
+!MESSAGE Problems occurred while trying to save the state of the workbench.
+!SUBENTRY 1 org.eclipse.core.resources 4 568 2014-10-25 17:47:06.587
+!MESSAGE Could not write workspace metadata '/media/pseudo/Media and Storage/Automata-Totalistic-Gen-4-master/CellularAutomata/.metadata/.plugins/org.eclipse.core.resources/.root/78.tree'.
+!STACK 0
+java.io.IOException: No space left on device
+	at java.io.FileOutputStream.writeBytes(Native Method)
+	at java.io.FileOutputStream.write(FileOutputStream.java:345)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.write(BufferedOutputStream.java:95)
+	at org.eclipse.core.internal.localstore.SafeFileOutputStream.write(SafeFileOutputStream.java:132)
+	at java.io.OutputStream.write(OutputStream.java:116)
+	at java.io.DataOutputStream.writeLong(DataOutputStream.java:224)
+	at org.eclipse.core.internal.resources.ResourceInfo.writeTo(ResourceInfo.java:469)
+	at org.eclipse.core.internal.resources.SaveManager.writeElement(SaveManager.java:1812)
+	at org.eclipse.core.internal.watson.ElementTreeWriter$1.writeData(ElementTreeWriter.java:62)
+	at org.eclipse.core.internal.dtree.DataTreeWriter.writeNode(DataTreeWriter.java:74)
+	at org.eclipse.core.internal.dtree.DataTreeWriter.writeNode(DataTreeWriter.java:89)
+	at org.eclipse.core.internal.dtree.DataTreeWriter.writeNode(DataTreeWriter.java:89)
+	at org.eclipse.core.internal.dtree.DataTreeWriter.writeNode(DataTreeWriter.java:89)
+	at org.eclipse.core.internal.dtree.DataTreeWriter.writeTree(DataTreeWriter.java:182)
+	at org.eclipse.core.internal.watson.ElementTreeWriter.writeTree(ElementTreeWriter.java:236)
+	at org.eclipse.core.internal.watson.ElementTreeWriter.writeDeltaChain(ElementTreeWriter.java:194)
+	at org.eclipse.core.internal.resources.SaveManager.writeTree(SaveManager.java:1929)
+	at org.eclipse.core.internal.resources.SaveManager.saveTree(SaveManager.java:1353)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1134)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2375)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor$5.run(IDEWorkbenchAdvisor.java:508)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)

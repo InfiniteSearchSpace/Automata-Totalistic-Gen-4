@@ -19,7 +19,7 @@ public class DotPlot extends JPanel {
 	float gvMax = Integer.MIN_VALUE;
 	float gvMin = Integer.MAX_VALUE;
 	int viewType = 0;
-	int targetType = 0;
+	int targetType = 2;
 	
 	int monotone = 255;
 	

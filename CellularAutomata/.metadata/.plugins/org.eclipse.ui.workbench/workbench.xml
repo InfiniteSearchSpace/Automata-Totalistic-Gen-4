@@ -37,13 +37,18 @@
 <part id="3"/>
 <part id="4"/>
 <part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" partName="Main.java" path="/media/pseudo/Media and Storage/Automata-Totalistic-Gen-4-master/CellularAutomata/Omniscience/src/Main.java" title="Main.java" tooltip="Omniscience/src/Main.java" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" partName="Main.java" path="/media/pseudo/Media and Storage/Automata-Totalistic-Gen-4-master/CellularAutomata/Omniscience/src/Main.java" title="Main.java" tooltip="Omniscience/src/Main.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Omniscience/src/Main.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="863" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3646" selectionTopPixel="1821"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="jMenuStats.java" partName="jMenuStats.java" path="/media/pseudo/Media and Storage/Automata-Totalistic-Gen-4-master/CellularAutomata/Omniscience/src/jMenuStats.java" title="jMenuStats.java" tooltip="Omniscience/src/jMenuStats.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Omniscience/src/jMenuStats.java"/>
@@ -53,9 +58,9 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Omniscience/src/StatisticFrame.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="532" selectionTopPixel="291"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DotPlot.java" partName="DotPlot.java" path="/media/pseudo/Media and Storage/Automata-Totalistic-Gen-4-master/CellularAutomata/Omniscience/src/DotPlot.java" title="DotPlot.java" tooltip="Omniscience/src/DotPlot.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DotPlot.java" partName="DotPlot.java" path="/media/pseudo/Media and Storage/Automata-Totalistic-Gen-4-master/CellularAutomata/Omniscience/src/DotPlot.java" title="DotPlot.java" tooltip="Omniscience/src/DotPlot.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Omniscience/src/DotPlot.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3243" selectionTopPixel="1869"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1115" selectionTopPixel="455"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ToggleFrame.java" partName="ToggleFrame.java" path="/media/pseudo/Media and Storage/Automata-Totalistic-Gen-4-master/CellularAutomata/Omniscience/src/ToggleFrame.java" title="ToggleFrame.java" tooltip="Omniscience/src/ToggleFrame.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Omniscience/src/ToggleFrame.java"/>
@@ -63,7 +68,27 @@
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Surf.java" partName="Surf.java" path="/media/pseudo/Media and Storage/Automata-Totalistic-Gen-4-master/CellularAutomata/Omniscience/src/Surf.java" title="Surf.java" tooltip="Omniscience/src/Surf.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Omniscience/src/Surf.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="1128" selectionOffset="3642" selectionTopPixel="1895"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4161" selectionTopPixel="1136"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="jMenuMain.java" partName="jMenuMain.java" path="/media/pseudo/Media and Storage/Automata-Totalistic-Gen-4-master/CellularAutomata/Omniscience/src/jMenuMain.java" title="jMenuMain.java" tooltip="Omniscience/src/jMenuMain.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Omniscience/src/jMenuMain.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="7016" selectionTopPixel="3717"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ml.java" partName="ml.java" path="/media/pseudo/Media and Storage/Automata-Totalistic-Gen-4-master/CellularAutomata/Omniscience/src/ml.java" title="ml.java" tooltip="Omniscience/src/ml.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Omniscience/src/ml.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="1821"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="jMenuEditor.java" partName="jMenuEditor.java" path="/media/pseudo/Media and Storage/Automata-Totalistic-Gen-4-master/CellularAutomata/Omniscience/src/jMenuEditor.java" title="jMenuEditor.java" tooltip="Omniscience/src/jMenuEditor.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Omniscience/src/jMenuEditor.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1008" selectionTopPixel="682"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Universe.java" partName="Universe.java" path="/media/pseudo/Media and Storage/Automata-Totalistic-Gen-4-master/CellularAutomata/Omniscience/src/Universe.java" title="Universe.java" tooltip="Omniscience/src/Universe.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Omniscience/src/Universe.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="659" selectionTopPixel="2161"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="automataLib.java" partName="automataLib.java" path="/media/pseudo/Media and Storage/Automata-Totalistic-Gen-4-master/CellularAutomata/Omniscience/src/automataLib.java" title="automataLib.java" tooltip="Omniscience/src/automataLib.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Omniscience/src/automataLib.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="7809" selectionTopPixel="4301"/>
 </editor>
 </editors>
 <views>
@@ -73,7 +98,6 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Errors"/>
 <category IMemento.internal.id="Warnings (20 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="149" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
@@ -324,118 +348,27 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Omniscience/src/DotPlot.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Omniscience/src/ToggleFrame.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Omniscience/src/Surf.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Omniscience/src/Main.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Omniscience/src/StatisticFrame.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Omniscience/src/jMenuStats.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Omniscience/src/jMenuMain.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Omniscience/src/ml.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Omniscience/src/StatisticFrame.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Omniscience/src/DotPlot.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Omniscience/src/jMenuStats.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Omniscience/src/Surf.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Omniscience/src/ToggleFrame.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Omniscience/src/ml.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Omniscience/src/getImage.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Omniscience/src/GetVid.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Omniscience/src/jMenuEditor.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Omniscience/src/Surf.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Omniscience/src/Universe.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Omniscience/src/automataLib.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Omniscience/src/Main.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Omniscience/src/StatisticFrame.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Omniscience/src/StatisticFrame.java"/>
 </editors>
-<item historyLabel="DotPlot.java" index="3">
-<position info="not_deleted" x="1580" y="0"/>
-</item>
-<item historyLabel="DotPlot.java" index="3">
-<position/>
-</item>
-<item historyLabel="DotPlot.java" index="3">
-<position info="not_deleted" x="2570" y="70"/>
-</item>
-<item historyLabel="DotPlot.java" index="3">
-<position/>
-</item>
-<item historyLabel="DotPlot.java" index="3">
-<position/>
-</item>
-<item historyLabel="DotPlot.java" index="3">
-<position info="not_deleted" x="3511" y="0"/>
-</item>
-<item historyLabel="DotPlot.java" index="3">
-<position info="not_deleted" x="2968" y="0"/>
-</item>
-<item historyLabel="DotPlot.java" index="3">
-<position info="not_deleted" x="3131" y="0"/>
-</item>
-<item historyLabel="DotPlot.java" index="3">
-<position/>
-</item>
-<item historyLabel="DotPlot.java" index="3">
-<position info="not_deleted" x="2996" y="0"/>
-</item>
-<item historyLabel="DotPlot.java" index="3">
-<position info="not_deleted" x="5495" y="0"/>
-</item>
-<item historyLabel="DotPlot.java" index="3">
-<position info="not_deleted" x="4762" y="0"/>
-</item>
-<item historyLabel="DotPlot.java" index="3">
-<position info="not_deleted" x="5523" y="0"/>
-</item>
-<item historyLabel="DotPlot.java" index="3">
-<position info="not_deleted" x="5456" y="4"/>
-</item>
-<item historyLabel="DotPlot.java" index="3">
-<position info="not_deleted" x="5405" y="0"/>
-</item>
-<item historyLabel="DotPlot.java" index="3">
-<position info="not_deleted" x="4621" y="0"/>
-</item>
-<item historyLabel="Main.java" index="0">
-<position info="not_deleted" x="863" y="0"/>
-</item>
-<item historyLabel="DotPlot.java" index="3">
-<position info="not_deleted" x="5035" y="0"/>
-</item>
-<item historyLabel="DotPlot.java" index="3">
-<position info="not_deleted" x="6349" y="0"/>
-</item>
-<item historyLabel="DotPlot.java" index="3">
-<position/>
-</item>
-<item historyLabel="DotPlot.java" index="3">
-<position info="not_deleted" x="6390" y="0"/>
-</item>
-<item historyLabel="DotPlot.java" index="3">
-<position info="not_deleted" x="6389" y="0"/>
-</item>
-<item historyLabel="DotPlot.java" index="3">
-<position info="not_deleted" x="6281" y="0"/>
-</item>
-<item historyLabel="StatisticFrame.java" index="2">
-<position info="not_deleted" x="213" y="0"/>
-</item>
-<item historyLabel="jMenuStats.java" index="1">
-<position info="not_deleted" x="668" y="0"/>
-</item>
-<item historyLabel="DotPlot.java" index="3">
-<position info="not_deleted" x="6280" y="0"/>
-</item>
-<item historyLabel="StatisticFrame.java" index="2">
-<position info="not_deleted" x="558" y="0"/>
-</item>
-<item historyLabel="DotPlot.java" index="3">
-<position info="not_deleted" x="6280" y="0"/>
-</item>
-<item historyLabel="jMenuStats.java" index="1">
-<position info="not_deleted" x="668" y="0"/>
-</item>
-<item historyLabel="Main.java" index="0">
-<position info="not_deleted" x="863" y="0"/>
-</item>
-<item historyLabel="jMenuStats.java" index="1">
-<position info="not_deleted" x="668" y="0"/>
-</item>
-<item historyLabel="StatisticFrame.java" index="2">
-<position info="not_deleted" x="558" y="0"/>
-</item>
-<item historyLabel="DotPlot.java" index="3">
-<position info="not_deleted" x="6067" y="0"/>
-</item>
-<item historyLabel="StatisticFrame.java" index="2">
-<position info="not_deleted" x="558" y="0"/>
-</item>
-<item historyLabel="jMenuStats.java" index="1">
-<position info="not_deleted" x="3525" y="0"/>
-</item>
-<item historyLabel="DotPlot.java" index="3">
-<position info="not_deleted" x="6067" y="0"/>
-</item>
-<item historyLabel="DotPlot.java" index="3">
-<position/>
-</item>
 <item historyLabel="DotPlot.java" index="3">
 <position info="not_deleted" x="6026" y="0"/>
 </item>
@@ -472,8 +405,119 @@
 <item historyLabel="Surf.java" index="5">
 <position info="not_deleted" x="3642" y="1128"/>
 </item>
-<item active="true" historyLabel="DotPlot.java" index="3">
+<item historyLabel="DotPlot.java" index="3">
 <position info="not_deleted" x="2715" y="0"/>
+</item>
+<item historyLabel="Main.java" index="6">
+<position info="not_deleted" x="863" y="0"/>
+</item>
+<item historyLabel="StatisticFrame.java" index="7">
+<position info="not_deleted" x="532" y="0"/>
+</item>
+<item historyLabel="jMenuStats.java" index="8">
+<position info="not_deleted" x="1342" y="0"/>
+</item>
+<item historyLabel="jMenuMain.java" index="9">
+<position info="not_deleted" x="7936" y="0"/>
+</item>
+<item historyLabel="ml.java" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="jMenuMain.java" index="9">
+<position info="not_deleted" x="3020" y="0"/>
+</item>
+<item historyLabel="StatisticFrame.java" index="7">
+<position info="not_deleted" x="532" y="0"/>
+</item>
+<item historyLabel="jMenuStats.java" index="8">
+<position info="not_deleted" x="1342" y="0"/>
+</item>
+<item historyLabel="jMenuMain.java" index="9">
+<position info="not_deleted" x="7343" y="0"/>
+</item>
+<item historyLabel="ml.java" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="jMenuMain.java" index="9">
+<position info="not_deleted" x="7343" y="0"/>
+</item>
+<item historyLabel="StatisticFrame.java" index="11">
+<position info="not_deleted" x="532" y="0"/>
+</item>
+<item historyLabel="DotPlot.java" index="12">
+<position info="not_deleted" x="258" y="0"/>
+</item>
+<item historyLabel="jMenuStats.java" index="13">
+<position info="not_deleted" x="1342" y="0"/>
+</item>
+<item historyLabel="jMenuMain.java" index="9">
+<position info="not_deleted" x="8289" y="0"/>
+</item>
+<item historyLabel="Surf.java" index="14">
+<position info="not_deleted" x="3642" y="1128"/>
+</item>
+<item historyLabel="ToggleFrame.java" index="15">
+<position info="not_deleted" x="870" y="0"/>
+</item>
+<item historyLabel="ml.java" index="16">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="getImage.java" index="17">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ml.java" index="16">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="GetVid.java" index="18">
+<position info="not_deleted" x="424" y="0"/>
+</item>
+<item historyLabel="jMenuEditor.java" index="19">
+<position info="not_deleted" x="1008" y="0"/>
+</item>
+<item historyLabel="jMenuMain.java" index="9">
+<position info="not_deleted" x="8289" y="0"/>
+</item>
+<item historyLabel="Surf.java" index="20">
+<position info="not_deleted" x="4161" y="0"/>
+</item>
+<item historyLabel="Universe.java" index="21">
+<position info="not_deleted" x="659" y="0"/>
+</item>
+<item historyLabel="automataLib.java" index="22">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="automataLib.java" index="22">
+<position info="not_deleted" x="8485" y="16"/>
+</item>
+<item historyLabel="automataLib.java" index="22">
+<position info="not_deleted" x="7812" y="0"/>
+</item>
+<item historyLabel="automataLib.java" index="22">
+<position info="not_deleted" x="7807" y="0"/>
+</item>
+<item historyLabel="automataLib.java" index="22">
+<position info="not_deleted" x="7798" y="0"/>
+</item>
+<item historyLabel="automataLib.java" index="22">
+<position info="not_deleted" x="7802" y="0"/>
+</item>
+<item historyLabel="automataLib.java" index="22">
+<position info="not_deleted" x="7806" y="0"/>
+</item>
+<item historyLabel="Main.java" index="23">
+<position info="not_deleted" x="318" y="0"/>
+</item>
+<item historyLabel="StatisticFrame.java" index="24">
+<position info="not_deleted" x="532" y="0"/>
+</item>
+<item historyLabel="Main.java" index="23">
+<position info="not_deleted" x="3617" y="0"/>
+</item>
+<item historyLabel="StatisticFrame.java" index="25">
+<position info="not_deleted" x="532" y="0"/>
+</item>
+<item active="true" historyLabel="Main.java" index="23">
+<position info="not_deleted" x="3399" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -492,6 +536,30 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="automataLib.java" tooltip="Omniscience/src/automataLib.java">
+<persistable path="/Omniscience/src/automataLib.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Universe.java" tooltip="Omniscience/src/Universe.java">
+<persistable path="/Omniscience/src/Universe.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="jMenuEditor.java" tooltip="Omniscience/src/jMenuEditor.java">
+<persistable path="/Omniscience/src/jMenuEditor.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GetVid.java" tooltip="Omniscience/src/GetVid.java">
+<persistable path="/Omniscience/src/GetVid.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="getImage.java" tooltip="Omniscience/src/getImage.java">
+<persistable path="/Omniscience/src/getImage.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ml.java" tooltip="Omniscience/src/ml.java">
+<persistable path="/Omniscience/src/ml.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="jMenuMain.java" tooltip="Omniscience/src/jMenuMain.java">
+<persistable path="/Omniscience/src/jMenuMain.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="im00000000.bmp" tooltip="Omniscience/227842/im00000000.bmp">
+<persistable path="/Omniscience/227842/im00000000.bmp"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Surf.java" tooltip="Omniscience/src/Surf.java">
 <persistable path="/Omniscience/src/Surf.java"/>
 </file>
@@ -510,32 +578,8 @@
 <file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Desktop.class" tooltip="java.awt.Desktop">
 <persistable org.eclipse.jdt.ui.ClassFileIdentifier="=Omniscience/\/usr\/lib\/jvm\/java-7-openjdk-amd64\/jre\/lib\/rt.jar&lt;java.awt(Desktop.class"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GetVid.java" tooltip="Omniscience/src/GetVid.java">
-<persistable path="/Omniscience/src/GetVid.java"/>
-</file>
 <file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Random.class" tooltip="java.util.Random">
 <persistable org.eclipse.jdt.ui.ClassFileIdentifier="=Omniscience/\/usr\/lib\/jvm\/java-7-openjdk-amd64\/jre\/lib\/rt.jar&lt;java.util(Random.class"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="neighbours.java" tooltip="Omniscience/src/neighbours.java">
-<persistable path="/Omniscience/src/neighbours.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="automataLib.java" tooltip="Omniscience/src/automataLib.java">
-<persistable path="/Omniscience/src/automataLib.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="mwl.java" tooltip="Omniscience/src/mwl.java">
-<persistable path="/Omniscience/src/mwl.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ml.java" tooltip="Omniscience/src/ml.java">
-<persistable path="/Omniscience/src/ml.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Universe.java" tooltip="Omniscience/src/Universe.java">
-<persistable path="/Omniscience/src/Universe.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="jMenuStats.java" tooltip="Omniscience/src/jMenuStats.java">
-<persistable path="/Omniscience/src/jMenuStats.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="jMenuMain.java" tooltip="Omniscience/src/jMenuMain.java">
-<persistable path="/Omniscience/src/jMenuMain.java"/>
 </file>
 </mruList>
 </workbench>
