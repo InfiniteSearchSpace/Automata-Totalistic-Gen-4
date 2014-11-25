@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item value="312" key="DIALOG_WIDTH"/>
+		<item value="314" key="DIALOG_WIDTH"/>
 		<item value="427" key="DIALOG_Y_ORIGIN"/>
+		<item value="414" key="DIALOG_HEIGHT"/>
 		<item value="1517" key="DIALOG_X_ORIGIN"/>
-		<item value="413" key="DIALOG_HEIGHT"/>
 		<item value="1|Droid Sans|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="casesensitive"/>
 		<item value="false" key="isRegEx"/>
+		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="}" key="selection"/>
+		<item value="Import Ne" key="selection"/>
 		<list key="findhistory">
+			<item value="import ne"/>
 			<item value=",}"/>
 			<item value=":"/>
 			<item value=":-2,-2,0,:-2,-1,0,:-2,0,0,:-2,1,0,:-2,2,0,:-1,-2,0,:-1,-1,0,:-1,0,0,:-1,1,0,:-1,2,0,:0,-3,0,:0,-2,0,:0,-1,0,:0,1,0,:0,2,0,:1,-2,0,:1,-1,0,:1,0,0,:1,1,0,:1,2,0,:2,-2,0,:2,-1,0,:2,0,0,:2,1,0,:2,2,0,"/>
@@ -22,7 +23,6 @@
 			<item value="seed"/>
 			<item value="copyPasteBlockSize"/>
 			<item value="show"/>
-			<item value="import"/>
 		</list>
 		<list key="replacehistory">
 			<item value="}"/>

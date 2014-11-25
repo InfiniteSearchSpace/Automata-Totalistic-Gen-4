@@ -658,7 +658,7 @@ public class jMenuEditor implements ActionListener {
     	int nextColon = 0;
     	int thisComma = 0;
     	int nextComma = 0;
-    	
+    	0
     	//For each line to be parsed
     	for(int i = 0; i < ruleLines; i++) {
     		//Identify line start & end

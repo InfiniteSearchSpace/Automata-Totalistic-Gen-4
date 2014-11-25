@@ -720,11 +720,16 @@ public class jMenuEditor implements ActionListener {
     	}
     	
     	
+		String finalArrayDebugChecker = "";
+    		
     	for(int i = 0; i < importedNbr.length; i++) {
+    		finalArrayDebugChecker += ":";
     		for(int j = 0; j < importedNbr[i].length; j++) {
-    			System.out.println(importedNbr[i][j] + ",");
+    			finalArrayDebugChecker += importedNbr[i][j] + ",";
     		}
     	}
+    	System.out.println(finalArrayDebugChecker);
+    	
     	
      	int centCell = ((TF.pp.length/2)-1);
      	
